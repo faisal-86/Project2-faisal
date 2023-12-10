@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const hotelSchema = mongoose.Schema({
-    address:Number,
+    address:String,
     hotelName: String,
-    phoneNum: Number
+    phoneNum: String
 
 },{timestamps: true
 });
