@@ -6,7 +6,7 @@ const router = express.Router();
 router.use(express.urlencoded({'extended': true}))
 router.use(methodOverRide('_method'))
 
-const roomCrl = require("../controllers/room")
+const roomCrl = require("../controllers/rooms")
 
 
 //routes
