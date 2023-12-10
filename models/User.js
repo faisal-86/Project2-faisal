@@ -1,12 +1,21 @@
 const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
- hotleName: String,
+ name: String,
  phoneNum: Number,
+ email: String,
+ googleId: {
+    type: String,
+    required: true
+},
+avatar: String
 
 
 },{timestamps: true
 });
-const Hotel = mongoose.model("User", userSchema)
 
-module.exports = {User}
+
+const User = mongoose.model("User", userSchema);
+
+
+module.exports = {User};
