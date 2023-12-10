@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 
 const roomTypeSchema = mongoose.Schema({
- roomSize:String,
- roomPrice:Number
+ roomPrice:Number,
+ description: String,
+ roomName:String
+
 
 },{timestamps: true
 });
