@@ -1,1 +1,19 @@
-<h1>this is HOTEL INDEX page</h1>
+<h1>Hotel</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Hotel Name</th>
+        <th>Hotel Address</th>
+        <th>Hotel Phone Number</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <% hotels.forEach(function(hotel){ %>
+    <tr>
+        <td><a href="/hotel/detail?id=<%=hotel._id %>"><%= hotel.hotelName %></a></td>
+        <td><%= hotel.address %></td>
+        <td><%= hotel.phoneNum %></td>
+        <td><a href="/hotel/edit?id=<%=hotel._id %>">Edit</a></td>
+        <td><a href="/hotel/delete?id=<%=hotel._id %>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
