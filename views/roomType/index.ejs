@@ -2,12 +2,29 @@
 
 <table>
 <tr>
-<th>Room Size</th>
-<th>Room Price</th>
 <th>Room Name</th>
+<th>Room Price</th>
+<th>Description</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
 
+<hr>
+<% roomTypes.forEach(function(roomType) {%>
+
+    <tr>
+       <td> <a href="/roomType/details?id=<%= roomType._id %>">
+
+         <%= roomType.roomName %></a></td>
+         <td><%= roomType.roomPrice %> </td>
+         
+         <td><%= roomType.description%> </td>
+       <td><a href="/roomTypes/delete?id=<%= roomType._id %>">Delete</a></td>
+         <td><a href="/roomTypes/edit?id=<%= roomType._id %>">Edit</a></td>
+          
+     
+    </tr>
+
+<% }) %>
 
 </table>
