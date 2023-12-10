@@ -1,0 +1,25 @@
+<h1>Room List</h1>
+
+<table class="table table-striped">
+<tr>
+<th>Name</th>
+
+<th>Delete</th>
+<th>Edit</th>
+</tr>
+
+<% rooms.forEach(room => { %><tr>
+    <td><a href="/room/details?id=<%= room._id %>"><%= room.name %></a></td>
+
+
+    <td><%= author.emailAdress %></td>
+    <td><%= author.phoneNumeber %></td>
+    
+    <td><a href="/room/delete?id=<%= room._id %>">Delete</a></td>
+    <td><a href="/room/edit?id=<%= room._id %>">Edit</a></td>
+
+  </tr>
+<% }); %>
+
+
+</table>
