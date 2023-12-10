@@ -30,11 +30,13 @@ app.use(express.static('public'));
 //------- Mount routes -------//
 // Your code goes here
 const hotelRouter = require("./routes/hotel");
+const roomTypeRouter = require("./routes/roomType");
 const userRouter = require("./routes/user")
 
 
 
-app.use("/hotel", hotelRouter);
+app.use("/hotel", hotelRouter);git 
+app.use("/roomType", roomTypeRouter);
 app.use("/user", userRouter);
 //-------------------------//
 
