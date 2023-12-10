@@ -35,7 +35,7 @@ const userRouter = require("./routes/user")
 
 
 
-app.use("/hotel", hotelRouter);git 
+app.use("/hotel", hotelRouter);
 app.use("/roomType", roomTypeRouter);
 app.use("/user", userRouter);
 //-------------------------//
