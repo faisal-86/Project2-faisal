@@ -32,12 +32,14 @@ app.use(express.static('public'));
 const hotelRouter = require("./routes/hotel");
 const roomTypeRouter = require("./routes/roomType");
 const userRouter = require("./routes/user")
+const roomsRouter = require("./routes/rooms")
 
 
 
 app.use("/hotel", hotelRouter);
 app.use("/roomType", roomTypeRouter);
 app.use("/user", userRouter);
+app.use("/rooms", roomsRouter);
 //-------------------------//
 
 // start listening to requests coming from the PORT
