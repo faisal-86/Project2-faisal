@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const hotelSchema = mongoose.Schema({
-    hotelId: Number,
     address:Number,
     hotelName: String,
     phoneNum: Number

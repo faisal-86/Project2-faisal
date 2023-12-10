@@ -29,8 +29,11 @@ app.use(express.static('public'));
 
 //------- Mount routes -------//
 // Your code goes here
+const hotelRouter = require("./routes/hotel");
 
 
+
+app.use("/hotel", hotelRouter);
 //-------------------------//
 
 // start listening to requests coming from the PORT
