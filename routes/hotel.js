@@ -2,9 +2,6 @@ const express = require('express');
 const router =  express.Router();
 router.use(express.urlencoded({extended: true}));
 const hotelCntrl = require("../controllers/hotel");
-// const isLoggedIn = require("../config/isLoggedIn");
-// router.get("/add", isLoggedIn, hotelCntrl.hotel_create_get);
-// router.post("/add", isLoggedIn, hotelCntrl.hotel_create_post);
 
 
 router.get("/add", hotelCntrl.hotel_create_get);
