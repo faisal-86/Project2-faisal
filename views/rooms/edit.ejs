@@ -1,0 +1,19 @@
+<h1>Edit Room</h1>
+<form method="POST" action="/rooms/update">
+    <div>
+      <label>Room Number</label>
+      <input type="number" name="roomNum" class="form-control" value="<%= rooms.roomNum %>">
+    </div>
+    <div>
+      <label>Room Type</label>
+      <select name="RoomType" class="form-control">
+          <%roomTypes.forEach(function(RoomType){%>
+            <%if(RoomType._id == rooms.RoomType._id){selected}%>
+              <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
+          <% }) %>
+      </select>
+  </div>
+  <input type="hidden" name="id" value="<%= rooms._id %>">
+    <button type="submit"  class="btn btn-secondary btn-lg">Add New Room</button>
+
+  </form>
