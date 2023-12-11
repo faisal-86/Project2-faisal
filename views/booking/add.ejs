@@ -1,0 +1,27 @@
+<h1>Add Booking</h1>
+
+
+<form method="POST" action="/booking/add">
+    
+    <div>
+      <label>Check In Date</label>
+      <input type="date" name="checkIn" class="form-control" />
+    </div>
+
+    <div>
+        <label>Check Out Date</label>
+        <input type="date" name="checkOut" class="form-control" />
+      </div>
+
+    <div>
+      <label>Room Type</label>
+      <select name="RoomType" class="form-control">
+          <%roomTypes.forEach(function(RoomType){%>
+              <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
+          <% }) %>
+      </select>
+  </div>
+
+    <button type="submit"  class="btn btn-secondary btn-lg">Add New Booking</button>
+
+  </form>
