@@ -21,5 +21,8 @@ router.get("/edit",roomTypeCrl.roomType_edit_get);
 
 router.put("/update", roomTypeCrl.roomType_update_put);
 
+// New route for handling image uploads, protected by requireAdminRole middleware
+router.post('/upload-image/:roomTypeId', roomTypeCtrl.roomType_upload_image_post);
+
 
 module.exports = router;

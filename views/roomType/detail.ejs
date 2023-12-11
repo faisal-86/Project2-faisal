@@ -10,8 +10,15 @@
     Description: <%= roomType.description %>
 </div>
 
-<form action="/profile" method="post" enctype="multipart/form-data">
-    <input type="file" name="avatar" />
-    <input type="hidden" name="id" value="<%= roomType._id %>"/>
-    <input type="submit">
-  </form>
+<div>
+    <h2>Images</h2>
+    <% if (roomType.images && roomType.images.length > 0) { %>
+        <ul>
+            <% roomType.images.forEach(image => { %>
+                <li><img src="<%= image %>" alt="Room Image"></li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No images available</p>
+    <% } %>
+</div>
