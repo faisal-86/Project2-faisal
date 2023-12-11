@@ -40,6 +40,7 @@ const hotelRouter = require("./routes/hotel");
 const roomTypeRouter = require("./routes/roomType")(upload);
 const userRouter = require("./routes/user")
 const roomsRouter = require("./routes/rooms")
+const bookingRouter = require("./routes/booking")
 
 
 
@@ -47,6 +48,7 @@ app.use("/hotel", hotelRouter);
 app.use("/roomType", roomTypeRouter);
 app.use("/user", userRouter);
 app.use("/rooms", roomsRouter);
+app.use("/booking", bookingRouter);
 //-------------------------//
 
 // start listening to requests coming from the PORT

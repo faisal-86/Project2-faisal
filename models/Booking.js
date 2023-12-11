@@ -1,8 +1,12 @@
 const mongoose = require('mongoose')
 
 const bookingSchema = mongoose.Schema({
-  roomAvailble: Boolean,
-  bookingId:Number
+  checkIn:Date,
+  checkOut:Date,
+  RoomType:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "RoomType"
+}
 
 },{timestamps: true
 });
