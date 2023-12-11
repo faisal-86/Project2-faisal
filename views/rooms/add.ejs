@@ -11,7 +11,7 @@
       <label>Room Type</label>
       <select name="RoomType" class="form-control">
           <%roomTypes.forEach(function(RoomType){%>
-              <option value="<%= RoomType._id %>"><%= RoomType.roomName %></option>        
+              <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
           <% }) %>
       </select>
   </div>

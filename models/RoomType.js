@@ -3,7 +3,11 @@ const mongoose = require('mongoose')
 const roomTypeSchema = mongoose.Schema({
  roomPrice:Number,
  description: String,
- roomName:String
+ type:String,
+ rooms:[{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Rooms"
+}]
 
 
 },{timestamps: true
