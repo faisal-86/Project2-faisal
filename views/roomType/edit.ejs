@@ -1,0 +1,28 @@
+<h1> Edit Rooms Type </h1>
+
+<form method="POSt" action="/roomType/update?_method=PUT">
+  
+  <div>
+  <label>Room Name</label>
+  <input type="text" name="roomName" value="<%= roomType.roomName %>">
+</div>
+
+<div>
+  <label>Room Description</label>
+  <input type="text" name="description" value="<%= roomType.description %>">
+</div>
+
+<div>
+  <label>Room Price</label>
+  <input type="text" name="roomPrice" value="<%= roomType.roomPrice %>">
+</div>
+
+
+<input type="hidden" name="id" value="<%= roomType._id %>" class="form-control"/>
+
+<button type="submit">Edit</button>
+</form>
+
+
+
+  
