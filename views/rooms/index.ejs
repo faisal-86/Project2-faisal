@@ -8,10 +8,9 @@
 </tr>
 
 <% rooms.forEach(room => { %><tr>
-    <td><a href="/room/details?id=<%= room._id %>"><%= room.roomNum %></a></td>
-    
-      <td><a href="/room/delete?id=<%= room._id %>">Delete</a></td>
-    <td><a href="/room/edit?id=<%= room._id %>">Edit</a></td>
+    <td><a href="/rooms/detail?id=<%= room._id %>"><%= room.roomNum %></a></td>
+      <td><a href="/rooms/delete?id=<%= room._id %>">Delete</a></td>
+    <td><a href="/rooms/edit?id=<%= room._id %>">Edit</a></td>
 
   </tr>
 <% }); %>
