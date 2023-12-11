@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
 
 const bookingSchema = mongoose.Schema({
-  roomAvailable: Boolean,
-  price:Number,
-  roomNum:Number,
+  roomAvailble: Boolean,
   bookingId:Number
 
 },{timestamps: true
