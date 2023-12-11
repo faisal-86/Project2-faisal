@@ -1,6 +1,6 @@
 <h1> Rooms Type</h1>
 
-<table>
+<table class="table table-success table-striped">
 <tr>
 <th>Room Name</th>
 <th>Room Price</th>
@@ -19,8 +19,8 @@
          <td><%= roomType.roomPrice %> </td>
          
          <td><%= roomType.description%> </td>
-       <td><a href="/roomType/delete?id=<%= roomType._id %>">Delete</a></td>
-         <td><a href="/roomType/edit?id=<%= roomType._id %>">Edit</a></td>
+       <td><a href="/roomType/delete?id=<%= roomType._id %>" class="btn btn-primary">Delete</a></td>
+         <td><a href="/roomType/edit?id=<%= roomType._id %>" class="btn btn-primary">Edit</a></td>
           
      
     </tr>
