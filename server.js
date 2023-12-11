@@ -1,6 +1,7 @@
 // server.js
 // Require dependencies
 const express = require('express');
+
 const expressLayout = require('express-ejs-layouts');
 require('dotenv').config()
 
