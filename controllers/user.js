@@ -2,7 +2,6 @@ const {User} = require("../models/User")
 
 // CRUD Operations
 
-
 // Create
 exports.user_create_get = (req, res) => {
     res.render("user/add");
