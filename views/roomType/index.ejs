@@ -13,14 +13,14 @@
 <% roomTypes.forEach(function(roomType) {%>
 
     <tr>
-       <td> <a href="/roomType/details?id=<%= roomType._id %>">
+       <td> <a href="/roomType/detail?id=<%= roomType._id %>">
 
          <%= roomType.roomName %></a></td>
          <td><%= roomType.roomPrice %> </td>
          
          <td><%= roomType.description%> </td>
-       <td><a href="/roomTypes/delete?id=<%= roomType._id %>">Delete</a></td>
-         <td><a href="/roomTypes/edit?id=<%= roomType._id %>">Edit</a></td>
+       <td><a href="/roomType/delete?id=<%= roomType._id %>">Delete</a></td>
+         <td><a href="/roomType/edit?id=<%= roomType._id %>">Edit</a></td>
           
      
     </tr>

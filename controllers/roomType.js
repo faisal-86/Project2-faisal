@@ -54,9 +54,11 @@ exports.roomType_delete_get = (req, res) =>{
 
 exports.roomType_edit_get = (req,res)=>{
     console.log(req.query.id);
+    // req.query.id = '6575cf34117a456964229f84' // hardcoded id for test only
     RoomType.findById(req.query.id)
     .then((roomType)=>{
-        res.render('roomType/edit',{roomType});
+        console.log(roomType);
+        res.render('roomType/edit', {roomType});
     })
     .catch((err)=>{
         console.log(err);
@@ -65,7 +67,7 @@ exports.roomType_edit_get = (req,res)=>{
 
 exports.roomType_update_put = (req,res)=>{
     console.log(req.body.id);
-    RoomType.findById(req.body.id, req.body)
+    RoomType.findByIdAndUpdate(req.body.id, req.body)
     .then(()=>{
         res.redirect('/roomType/index');
     })
