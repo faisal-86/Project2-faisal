@@ -13,8 +13,9 @@ const roomTypeCrl = require("../controllers/roomType")
 router.get("/add", roomTypeCrl.roomType_create_get);
 router.post("/add", roomTypeCrl.roomType_create_post);
 router.get("/index", roomTypeCrl.roomType_index_get);
-router.get("/details", roomTypeCrl.roomType_show_get);
+router.get("/detail", roomTypeCrl.roomType_show_get);
 router.get("/delete", roomTypeCrl.roomType_delete_get);
+
 router.get("/edit",roomTypeCrl.roomType_edit_get);
 
 
