@@ -9,3 +9,9 @@
 <div>
     Description: <%= roomType.description %>
 </div>
+
+<form action="/profile" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar" />
+    <input type="hidden" name="id" value="<%= roomType._id %>"/>
+    <input type="submit">
+  </form>

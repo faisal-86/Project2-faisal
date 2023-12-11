@@ -19,6 +19,8 @@ const port = process.env.PORT || 3000
 app.set('view engine', 'ejs');
 app.use(expressLayout);
 
+
+
 // to encode req.body - make form data readable in controllers
 app.use(express.urlencoded({ extended: true }));
 
@@ -44,3 +46,13 @@ app.use("/rooms", roomsRouter);
 
 // start listening to requests coming from the PORT
 app.listen(port, () => console.log(`Server is running on http://localhost:${port}`))
+
+//Uploading Images
+
+const multer = require('multer');
+
+const upload = multer({ dest: 'uploads/' });
+
+app.use(express.static('public'));
+
+
