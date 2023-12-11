@@ -1,24 +1,43 @@
 const {Rooms} = require('../models/Rooms')
+const {RoomType} = require('../models/RoomType')
 
 exports.room_create_get = (req,res)=>{
-res.render('rooms/add')
+    RoomType.find()
+.then((roomTypes) => {
+    res.render("rooms/add", {roomTypes});
+})
+.catch((err) => {
+    console.log(err);
+})   
 }
 
 exports.room_create_post = (req,res)=>{
-    console.log(req.body)
+    console.log(req.body);
     let rooms = new Rooms(req.body);
     rooms.save()
     .then(()=>{
-        res.redirect("/rooms/index")
-    })
-    .catch((err)=>{
-        console.log(err)
-        res.send('Please Try Again !')
-    })
+        req.body.roomType.forEach(roomType =>{
+            RoomType.findById(roomType)
+            .then((roomType) => {
+                roomType.rooms.push(rooms);
+                roomType.save();
+            })
+            .catch((err)=>{
+                console.log(err)
+                res.send('Please Try Again !')
+            })
+        })
+
+            res.redirect("/rooms/index");
+        })
+        .catch((err)=>{
+            console.log(err)
+            res.send('Please Try Again !')
+        })
 }
 
 exports.room_index_get = (req,res)=>{
-    Rooms.find()
+    Rooms.find().populate('RoomType')
     .then((rooms)=>{
         res.render("rooms/index",{rooms})
     })
@@ -31,7 +50,7 @@ exports.room_index_get = (req,res)=>{
 
 exports.room_show_get = (req,res)=>{
     console.log(req.query.id);
-    Rooms.findById(req.query.id)
+    Rooms.findById(req.query.id).populate('RoomType')
     .then((rooms)=>{
         console.log(rooms)
         res.render("rooms/detail", {rooms}) 
