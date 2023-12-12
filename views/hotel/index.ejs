@@ -5,3 +5,40 @@
         <h2>Hotel Phone Number</h2>
         <h3><%= hotel.phoneNum %></h3>
 <% }) %>
+
+
+
+<body>
+    
+        <div><h1><a href="/hotel/index" class="noStyle">Hotel App</a></h1></div>
+        <nav>
+    
+            <% if(user) {%>
+    
+    
+            <a href="/rooms/index" class="btn btn-outline-primary">Rooms</a>
+            <a href="/rooms/add" class="btn btn-outline-primary">Add Room</a>
+            <a href="/logout">Logout</a>
+            <% } else { %>
+                <a href="/user/index" class="btn btn-outline-primary">Users</a>
+               
+                <a href="/auth/google">Login</a>
+                <% } %>
+        </nav>
+        <hr>
+    
+        <!-- HTML form for uploading user avatars -->
+    <!-- <form action="/users/upload-avatar" method="post" enctype="multipart/form-data">
+        <input type="text" name="userId" placeholder="User ID">
+        <input type="file" name="avatar" accept="image/*">
+        <button type="submit">Upload Avatar</button>
+      </form>
+       -->
+    
+       
+    
+      
+     
+         
+        
+    </body>
