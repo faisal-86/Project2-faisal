@@ -11,9 +11,14 @@
     <div>
       <label>Room Type</label>
       <select name="RoomType" class="form-control">
+        <optgroup>
+          <option value="<%= bookings.RoomType._id %>"><%= bookings.RoomType.type %></option>
+        </optgroup>
+        <optgroup label="All Room Types">
           <%roomTypes.forEach(function(RoomType){%>
               <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
           <% }) %>
+        </optgroup>
       </select>
   </div>
   <input type="hidden" name="id" value="<%= bookings._id %>">
