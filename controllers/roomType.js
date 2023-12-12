@@ -75,3 +75,25 @@ exports.roomType_update_put = (req,res)=>{
         console.log(err);
     })
 }
+
+
+
+//Images
+
+
+exports.roomType_upload_image_post = (req, res) => {
+    const roomTypeId = req.params.roomTypeId;
+
+    
+    const images = req.files.map(file => file.path); 
+
+    RoomType.findByIdAndUpdate(roomTypeId, { $push: { images: { $each: images } } }, { new: true })
+    .then(() => {
+        res.redirect(`/roomType/detail?id=${roomTypeId}`);
+    })
+    .catch(error => {
+        console.error(error);
+        res.send('Error uploading images');
+    });
+
+};
