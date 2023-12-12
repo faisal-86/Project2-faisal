@@ -12,13 +12,9 @@
 
 <div>
     <h2>Images</h2>
-    <% if (roomType.images && roomType.images.length > 0) { %>
+    
         <ul>
-            <% roomType.images.forEach(image => { %>
-                <li><img src="<%= image %>" alt="Room Image"></li>
-            <% }) %>
-        </ul>
-    <% } else { %>
-        <p>No images available</p>
-    <% } %>
+            <%= roomType.images %>
+                <li><img src="../../public/uploads/images-1702370333400-xia_dynasty.png" alt="Room Image"></li>
+            
 </div>

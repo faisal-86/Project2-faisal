@@ -1,10 +1,10 @@
 <h1> Edit Rooms Type </h1>
 
-<form method="POST" action="/roomType/update?_method=PUT">
+<form method="POST" action="/roomType/update" enctype="multipart/form-data">
   
   <div>
   <label>Room Name</label>
-  <input type="text" name="roomName" value="<%= roomType.roomName %>">
+  <input type="text" name="roomName" value="<%= roomType.type %>">
 </div>
 
 <div>
@@ -19,13 +19,13 @@
 
 <div>
   <label>Upload Images</label>
-  <input type="file" name="images" accept="image/*" multiple>
+  <input type="file" name="images" accept="image/*">
 </div>
 
 
 <input type="hidden" name="id" value="<%= roomType._id %>" class="form-control"/>
 
-<button type="submit">Update</button>
+<input type="submit" value="Submit">
 </form>
 
 

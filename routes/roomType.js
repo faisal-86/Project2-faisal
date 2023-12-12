@@ -1,18 +1,27 @@
 const express = require("express")
 const methodOverRide = require('method-override');
 
+const imageConfig = require('../config/imageConfig');
 
 
 
 const router = express.Router();
-router.use(express.urlencoded({'extended': true}))
 router.use(methodOverRide('_method'))
 
-const multerImg = require('../config/multerImg');
 
 const roomTypeCrl = require("../controllers/roomType")
 
-
+// Multer
+const multer = require('multer');
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/uploads/')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now() + '-' + file.originalname)
+    }
+  })
+  let upload = multer({ storage: storage })
 
 
 // ... Your routes and middleware usage
@@ -31,10 +40,14 @@ router.get("/delete", roomTypeCrl.roomType_delete_get);
 router.get("/edit",roomTypeCrl.roomType_edit_get);
 
 
-router.put("/update", roomTypeCrl.roomType_update_put);
+router.post("/update", upload.single('images'), roomTypeCrl.roomType_update_put);
 
 //  route for handling image uploads
- router.post('/public/uploads/:roomTypeId', multerImg, roomTypeCrl.roomType_upload_image_post);
+router.post('/upload-image/:roomTypeId', imageConfig.upload.array('images'), roomTypeCrl.roomType_upload_image_post);
+
+
+
+
 
 
 module.exports = router;

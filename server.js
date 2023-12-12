@@ -2,8 +2,6 @@
 // Require dependencies
 const express = require('express');
 
-//Multer dependencies
-const multer = require('multer');
 
 
 const expressLayout = require('express-ejs-layouts');
@@ -12,19 +10,16 @@ require('dotenv').config()
 // connect to mongoDB
 require('./config/db')
 
+
+// // Import imageConfig
+// const imageConfig = require('./config/imageConfig');
+// const upload = imageConfig.upload; // Extract the upload middleware
+
 // initialize express app
 const app = express();
 
 // get the port number form .env file, if undefined, 3000
 const port = process.env.PORT || 3000
-
-app.use(express.static('public'));
-
-
-
-
-// const upload = multer({ storage: storage });
-
 
 
 
@@ -39,8 +34,13 @@ app.use(expressLayout);
 // to encode req.body - make form data readable in controllers
 app.use(express.urlencoded({ extended: true }));
 
-// link you static folder i.e. images, css 
-// app.use(express.static('public'));
+
+
+// app.use(upload.array('images')); // Multer middleware
+
+// link you static folder i.e. images, css rs
+
+//  app.use('/uploads', express.static('public/uploads'));
 //-------------------------//
 
 
@@ -49,7 +49,7 @@ app.use(express.urlencoded({ extended: true }));
 //------- Mount routes -------//
 // Your code goes here
 const hotelRouter = require("./routes/hotel");
-const roomTypeRouter = require("./routes/roomType")//(upload);
+const roomTypeRouter = require("./routes/roomType") //(upload);
 const userRouter = require("./routes/user")
 const roomsRouter = require("./routes/rooms")
 const bookingRouter = require("./routes/booking")
