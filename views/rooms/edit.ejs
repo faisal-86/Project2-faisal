@@ -7,13 +7,17 @@
     <div>
       <label>Room Type</label>
       <select name="RoomType" class="form-control" id="mySelect">
+        <optgroup>
+          <option value="<%= rooms.RoomType._id %>"><%= rooms.RoomType.type %></option>
+        </optgroup>
+        <optgroup label="All Room Types">        
           <%roomTypes.forEach(function(RoomType){%>
-            <%if(rooms.RoomType._id == RoomType._id){document.querySelector("option").setAttribute('selected', 'selected')}else{console.log(RoomType._id);}%>
-              <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
+            <option value="<%= RoomType._id %>"><%= RoomType.type %></option>
           <% }) %>
+        </optgroup> 
       </select>
   </div>
   <input type="hidden" name="id" value="<%= rooms._id %>">
-    <button type="submit"  class="btn btn-secondary btn-lg">Add New Room</button>
+    <button type="submit"  class="btn btn-secondary btn-lg">Edit Room</button>
 
   </form>
