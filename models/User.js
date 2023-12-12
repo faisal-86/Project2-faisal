@@ -3,11 +3,16 @@ const mongoose = require('mongoose')
 const userSchema = mongoose.Schema({
  name: String,
  phoneNum: Number,
- emailAddress: String,
-//  googleId: {
-//     type: String,
-//     required: true
-// },
+ email: String,
+ googleId: {
+    type: String,
+    // required: true
+},
+role: {
+        type: String,
+        enum: ['admin', 'guest'],
+        default: 'guest'
+      },
 avatar: String,
 
 },{timestamps: true
@@ -17,4 +22,4 @@ avatar: String,
 const User = mongoose.model("User", userSchema);
 
 
-module.exports = {User};
+module.exports = User;
