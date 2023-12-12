@@ -1,9 +1,22 @@
-<h1>Make A Booking</h1>
-<% bookings.forEach(function(booking){ %>
-  <p>Type: <%= booking.RoomType.type %></p>
-          <p>booking checkIn</p>
-          <p><%= booking.checkIn %></p>
-          <p>booking checkOut</p>
-          <p><%= booking.checkOut %></p>
-  <hr>
-  <% }) %>
+<h1>Booking List</h1>
+<table class="table table-success table-striped">
+<tr>
+<th>Bookings</th>
+<th>Room Name</th>
+<th>Checking In At</th>
+<th>Checking Out At</th>
+<th>Delete</th>
+<th>Edit</th>
+</tr>
+<hr>
+<% bookings.forEach(function(booking){%>
+<tr>
+<td><a href="/booking/detail?id=<%=booking._id %>">Review Details</a></td>
+<td><%=booking.RoomType.type%></td>
+<td><%= booking.checkIn%></td>
+<td><%= booking.checkOut%></td>
+<td><a href="/booking/delete?id=<%=booking._id %>" class="btn btn-primary">Delete</a></td>
+<td><a href="/booking/edit?id=<%=booking._id %>" class="btn btn-primary">Edit</a></td>
+</tr>
+<% }) %>
+</table>

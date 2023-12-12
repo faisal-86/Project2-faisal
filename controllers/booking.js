@@ -26,42 +26,29 @@ exports.booking_create_get = (req,res)=>{
 
   exports.booking_create_post = (req,res)=>{
     let bookings = new Booking(req.body);
-
-    // Save the booking and then perform additional operations
     bookings.save()
       .then(() => {
-        // Find the RoomType
         return RoomType.findById(req.body.RoomType);
       })
       .then((roomType) => {
         if (!roomType) {
-          throw new Error('RoomType not found');
+          res.send('Please Try Again !')
         }
-    
         console.log(bookings);
-    
-        // Check if roomType.bookings is an array or initialize it as an empty array
+        // Check if roomType.bookings is array or make it an empty array
         roomType.bookings = Array.isArray(roomType.bookings) ? roomType.bookings : [];
-    
-        // Push the bookings to the roomType's bookings array
-        roomType.bookings.push(bookings);
-    
-        // Save the modified roomType
-        return roomType.save();
+        roomType.bookings.push(bookings);    
+        // return roomType.save();
       })
-      .then(() => {res.redirect("/booking/index");
-        // Additional code after the roomType has been saved
+      .then(() => {
+        res.redirect("/booking/index");
       })
       .catch((error) => {
         console.error(error);
-        // Handle errors here
       });
     
     }
-  /*
-  
-  
- 
+
   
   exports.booking_show_get = (req,res)=>{
       console.log(req.query.id);
@@ -73,9 +60,8 @@ exports.booking_create_get = (req,res)=>{
       .catch(err=>{
           console.log(err)
       })
-  }
-  
-  exports.booking_delete_get = (req, res) =>{
+  }  
+exports.booking_delete_get = (req, res) =>{
       console.log(req.query.id);
       Booking.findByIdAndDelete(req.query.id)
       .then(() =>{
@@ -84,8 +70,7 @@ exports.booking_create_get = (req,res)=>{
       .catch((err) =>{
           console.log(err);
       })
-  }
-  
+  } 
   exports.booking_edit_get = (req,res)=>{
       console.log(req.query.id);
       RoomType.find().then(
@@ -110,7 +95,7 @@ exports.booking_create_get = (req,res)=>{
   
   exports.booking_update_post = (req,res)=>{
       console.log(req.body.id);
-      Bookings.findByIdAndUpdate(req.body.id, req.body).populate()
+      Booking.findByIdAndUpdate(req.body.id, req.body).populate()
       .then(()=>{
           res.redirect('/booking/index');
       })
@@ -118,4 +103,3 @@ exports.booking_create_get = (req,res)=>{
           console.log(err);
       })
   }
-  */
