@@ -1,10 +1,13 @@
 const {Booking} = require("../models/Booking");
 const {RoomType} = require('../models/RoomType');
+const dayjs = require('dayjs')
+var relativeTime = require('dayjs/plugin/relativeTime')
+dayjs.extend(relativeTime)
 
  exports.booking_index_get = (req,res)=>{
       Booking.find().populate('RoomType')
       .then((bookings)=>{
-          res.render("booking/index",{bookings})
+          res.render("booking/index",{bookings, dayjs})
       })
       .catch((err)=>{
           console.log(err)
@@ -55,7 +58,7 @@ exports.booking_create_get = (req,res)=>{
       Booking.findById(req.query.id).populate('RoomType')
       .then((bookings)=>{
           console.log(bookings)
-          res.render("booking/detail", {bookings}) 
+          res.render("booking/detail", {bookings, dayjs}) 
       })
       .catch(err=>{
           console.log(err)

@@ -13,8 +13,8 @@
 <tr>
 <td><a href="/booking/detail?id=<%=booking._id %>">Review Details</a></td>
 <td><%=booking.RoomType.type%></td>
-<td><%= booking.checkIn%></td>
-<td><%= booking.checkOut%></td>
+<td><%= dayjs(booking.checkIn).format('MM/DD/YYYY')  %></td>
+<td><%= dayjs(booking.checkOut).format('MM/DD/YYYY')  %></td>
 <td><a href="/booking/delete?id=<%=booking._id %>" class="btn btn-primary">Delete</a></td>
 <td><a href="/booking/edit?id=<%=booking._id %>" class="btn btn-primary">Edit</a></td>
 </tr>
