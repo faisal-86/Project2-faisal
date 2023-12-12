@@ -41,6 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 // link you static folder i.e. images, css rs
 
 //  app.use('/uploads', express.static('public/uploads'));
+app.use(express.static('public'))
 //-------------------------//
 
 

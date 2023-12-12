@@ -1,7 +1,7 @@
 const express = require("express")
 const methodOverRide = require('method-override');
 
-const imageConfig = require('../config/imageConfig');
+
 
 
 
@@ -41,9 +41,6 @@ router.get("/edit",roomTypeCrl.roomType_edit_get);
 
 
 router.post("/update", upload.single('images'), roomTypeCrl.roomType_update_put);
-
-//  route for handling image uploads
-router.post('/upload-image/:roomTypeId', imageConfig.upload.array('images'), roomTypeCrl.roomType_upload_image_post);
 
 
 

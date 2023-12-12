@@ -1,5 +1,5 @@
 <div>
-    Room Name: <%= roomType.roomName %>
+    Room Name: <%= roomType.type %>
 </div>
 
 <div>
@@ -10,11 +10,11 @@
     Description: <%= roomType.description %>
 </div>
 
+
+
 <div>
     <h2>Images</h2>
-    
-        <ul>
-            <%= roomType.images %>
-                <li><img src="../../public/uploads/images-1702370333400-xia_dynasty.png" alt="Room Image"></li>
-            
+    <ul>
+        <li><img src="<%= roomType.images %>" alt="Room Image"></li>
+    </ul>
 </div>
