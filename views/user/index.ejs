@@ -12,9 +12,11 @@
  
   <table class="table table-striped">
     <tr>
+        <th>Avatar</th>
         <th>Name</th>
         <th>Email Address</th>
         <th>Phone Number</th>
+        <th>Role</th>
         <th>Delete</th>
         <th>Edit</th>
     </tr>
@@ -22,6 +24,9 @@
     <% users.forEach(function (user) { %>
     
         <tr>
+          <td>
+            <img src="<%= user.avatar %>" alt="User Avatar">
+          </td>
             <td>
                 <a href="/user/detail?id=<%=  user._id %>"> 
                 <%= user.name %></a>
@@ -29,7 +34,8 @@
     
             <td><%= user.email %></td>
             <td><%= user.phoneNum %></td>
-            
+            <td><%= user.role %></td>
+
            <td><a href="/user/delete?id=<%= user._id %>">Delete</a></td> 
            <td><a href="/user/edit?id=<%= user._id %>">Edit</a></td>
           

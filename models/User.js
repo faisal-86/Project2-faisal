@@ -14,6 +14,8 @@ role: {
         default: 'guest'
       },
 avatar: String,
+username: String,
+password: String,
 
 },{timestamps: true
 });
