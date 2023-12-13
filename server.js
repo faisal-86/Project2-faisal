@@ -20,8 +20,8 @@ require('./config/db')
 // initialize express app
 const app = express();
 
-// get the port number form .env file, if undefined, 3000
-const port = process.env.PORT || 3000
+// get the port number form .env file, if undefined, 
+const port = process.env.PORT
 
 
 

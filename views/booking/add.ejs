@@ -1,18 +1,5 @@
 <h1>Add Booking</h1>
-
-
 <form method="POST" action="/booking/add">
-    
-    <div>
-      <label>Check In Date</label>
-      <input type="date" name="checkIn" class="form-control" />
-    </div>
-
-    <div>
-        <label>Check Out Date</label>
-        <input type="date" name="checkOut" class="form-control" />
-      </div>
-
     <div>
       <label>Room Type</label>
       <select name="RoomType" class="form-control">
@@ -21,7 +8,7 @@
           <% }) %>
       </select>
   </div>
-
-    <button type="submit"  class="btn btn-secondary btn-lg">Add New Booking</button>
-
+  <input type="hidden" name="checkIn" value="<%=requestedCheckin%>">
+  <input type="hidden" name="checkOut" value="<%=requestedCheckOut%>">
+    <button type="submit" class="btn btn-secondary btn-lg">Add New Booking</button>
   </form>
