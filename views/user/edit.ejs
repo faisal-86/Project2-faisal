@@ -1,6 +1,9 @@
-<h1>Edit User</h1>
 
-<form method="POST" action="/user/update?_method=PUT" enctype="multipart/form-data">
+<div class="userEditPageCon">
+    <div class="background0">
+<div class="userPageInfo">
+<h1>Edit User</h1>
+<form method="POST" action="/user/update?_method=PUT">
     <div>
         <label>Name</label>
         <input type="text" name="name"  value="<%= user.name %>">
@@ -15,9 +18,9 @@
         <label>Phone Number</label>
         <input type="text" name="phoneNum" value="<%= user.phoneNum %>">
     </div>
+</div>
 
-    
-
+<div class="inputs">
     <div>
         <label>Role</label>
         <select name="role" <%= user.role === 'admin' ? '' : 'disabled' %>>
@@ -36,6 +39,8 @@
 
     <input type="hidden" name="id" value="<%= user._id %>">
 
-    <input type="submit" value="Update User">
-
+<button type="submit">Update User</button>
+</div>
 </form>
+ </div>
+</div>
