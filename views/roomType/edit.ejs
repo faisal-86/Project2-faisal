@@ -1,29 +1,29 @@
-<h1> Edit Rooms Type </h1>
+<h1 class="roomTypeEdith1"> Edit Rooms Type </h1>
 
 <form method="POST" action="/roomType/update" enctype="multipart/form-data">
   
   <div>
   <label>Room Name</label>
-  <input type="text" name="roomName" value="<%= roomType.type %>">
+  <input required type="text" name="roomName" value="<%= roomType.type %>">
 </div>
 
 <div>
   <label>Room Description</label>
-  <input type="text" name="description" value="<%= roomType.description %>">
+  <input required type="text" name="description" value="<%= roomType.description %>">
 </div>
 
 <div>
   <label>Room Price</label>
-  <input type="text" name="roomPrice" value="<%= roomType.roomPrice %>">
+  <input required ="text" name="roomPrice" value="<%= roomType.roomPrice %>">
 </div>
 
 <div>
   <label>Upload Images</label>
-  <input type="file" name="images" accept="image/*">
+  <input required type="file" name="images" accept="image/*">
 </div>
 
 
-<input type="hidden" name="id" value="<%= roomType._id %>" class="form-control"/>
+<input required type="hidden" name="id" value="<%= roomType._id %>" class="form-control"/>
 
 <input type="submit" value="Update">
 </form>
