@@ -1,18 +1,5 @@
 <h1>Add Booking</h1>
-
-
 <form method="POST" action="/booking/add">
-    
-    <div>
-      <label>Check In Date</label>
-      <input type="date" name="checkIn" class="form-control" />
-    </div>
-
-    <div>
-        <label>Check Out Date</label>
-        <input type="date" name="checkOut" class="form-control" />
-      </div>
-<%= bookings.RoomType.rooms[0].id%>
     <div>
       <label>Room Type</label>
       <select name="RoomType" class="form-control">
@@ -21,29 +8,5 @@
           <% }) %>
       </select>
   </div>
-
-    <button type="submit"  class="btn btn-secondary btn-lg">Add New Booking</button>
-
+    <button type="submit" class="btn btn-secondary btn-lg">Add New Booking</button>
   </form>
-
-  <script>
-    //ALL ROOMS w/ BOOKINGS
-const array = [1, 2, 3];
-//LOOOPPPPP the following
-function test(){
-    if(array.indexOf(9) !== -1){
-    console.log('Array contains a value.');
-}else{
-    console.log('Array does not contains a value.');
-    let notBooked = [];
-    notBooked2 = notBooked.push(9);
-    console.log(notBooked);
-    if(notBooked == 9){
-        console.log("yeep, we got it!")
-    }else{
-        console.log("nop")
-    }
-}
-}
-test()
-  </script>
