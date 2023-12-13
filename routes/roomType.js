@@ -24,8 +24,6 @@ var storage = multer.diskStorage({
   let upload = multer({ storage: storage })
 
 
-// ... Your routes and middleware usage
-
 
 
 

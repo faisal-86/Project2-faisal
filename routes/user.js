@@ -1,8 +1,8 @@
 // Load express module
 const express = require("express");
 const methodOverride = require("method-override");
-
-
+const isLoggedIn = require('../config/isLoggedIn');
+const isAdmin = require('../config/isAdmin');
 
 
 
@@ -17,14 +17,47 @@ router.use(methodOverride("_method"));
 const userCntrl = require("../controllers/user");
 
 
+
+
+
+
+// // Multer
+// const multer = require('multer');
+// var storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//       cb(null, './public/uploads/')
+//     },
+//     filename: function (req, file, cb) {
+//       cb(null, file.fieldname + '-' + Date.now() + '-' + file.originalname)
+//     }
+//   })
+//   const User = require('../models/User');
+
+// const getUserData = async (req, res, next) => {
+//   if (req.isAuthenticated()) {
+//     const user = await User.findById(req.user._id);
+//     res.locals.currentUser = user; // Make user data available in templates
+//   }
+//   next();
+// };
+
+// module.exports = getUserData;
+
+
+
+
+
 // routes
-router.get("/add",  userCntrl.user_create_get);
-router.post("/add",  userCntrl.user_create_post);
-router.get("/index", userCntrl.user_index_get);
-router.get("/detail", userCntrl.user_show_get);
-router.get("/delete", userCntrl.user_delete_get);
-router.get("/edit", userCntrl.user_edit_get);
-router.put("/update", userCntrl.user_update_put);
+router.get("/add", isAdmin, isLoggedIn, userCntrl.user_create_get);
+router.post("/add", isAdmin, isLoggedIn, userCntrl.user_create_post);
+router.get("/index",  isAdmin, isLoggedIn, userCntrl.user_index_get);
+router.get("/detail", isLoggedIn, userCntrl.user_show_get);
+router.get("/delete", isAdmin, isLoggedIn, userCntrl.user_delete_get);
+router.get("/edit", isAdmin, isLoggedIn, userCntrl.user_edit_get);
+
+router.put("/update",  isLoggedIn, userCntrl.user_update_put);
+
+
 
 
 

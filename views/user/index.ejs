@@ -8,14 +8,19 @@
  
   <table class="table table-dark table-striped-columns">
     <tr>
+        <th>Avatar</th>
         <th>Name</th>
         <th>Email Address</th>
         <th>Phone Number</th>
+        <th>Role</th>
         <th>Delete</th>
         <th>Edit</th>
     </tr>
     <% users.forEach(function (user) { %>
         <tr>
+          <td>
+            <img src="<%= user.avatar %>" alt="User Avatar">
+          </td>
             <td>
               <a href="/user/detail?id=<%=  user._id %>"> 
               <%= user.name %></a>
@@ -23,6 +28,11 @@
     
             <td><%= user.email %></td>
             <td><%= user.phoneNum %></td>
+<<<<<<< HEAD
+            <td><%= user.role %></td>
+
+=======
+>>>>>>> b128808ca51096a414abbd68c5b1317a99074189
            <td><a href="/user/delete?id=<%= user._id %>">Delete</a></td> 
            <td><a href="/user/edit?id=<%= user._id %>">Edit</a></td>
         </tr>
