@@ -1,0 +1,130 @@
+/* Hotel index page  */
+
+.hotelLogo{
+    height: 100px;
+    background-color:black ;
+}
+
+
+
+/* End of the page */
+
+/* user add page */
+.userAddLogo{
+    height: 100px;
+background-color:black ;
+}
+.logos{
+    height: 100px;
+    max-width:fit-content ;
+
+}
+.userAddPage {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/uploads/5040007.jpg");
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+.userAddPageCon {
+    width: 50%;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.col {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.col-5 {
+    flex: 1;
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+}
+/* End of the page */
+
+/* User index page  */
+.logoUserIndex{
+    height: 100px;
+    background-color:black ;
+}
+.userH1{
+padding: 20px; 
+color: aliceblue;
+}
+.userIndexPage{
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("/uploads/5040007.jpg");
+    background-size: cover;
+}
+
+.userIndexPageCon{
+padding: 20px 20px;
+  
+}
+
+table{
+    width: max-content;
+
+}
+
+/* End of the page  */
+
+/* rooms index page  */
+.roomsIndexLogo{
+    height: 100px;
+    background-color:black ;
+}
+.roomsIndexPage{
+    background-image: url("../uploads/pasted\ image\ 0.png");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.roomsIndexH1{
+    
+}
+.roomsIndexTable{
+width: 600px;
+
+}
+.roomsIndexPageCon{
+    background-color: white; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+/* End of the page  */

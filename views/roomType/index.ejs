@@ -1,30 +1,44 @@
-<h1> Rooms Type</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User List!</title>
 
-<table class="table table-success table-striped">
-<tr>
-<th>Room Name</th>
-<th>Room Price</th>
-<th>Description</th>
-<th>Delete</th>
-<th>Edit</th>
-</tr>
+</head>
 
-<hr>
-<% roomTypes.forEach(function(roomType) {%>
+<body class="roomTypeIndex">
+  <h1> Rooms Type</h1>
 
-    <tr>
-       <td> <a href="/roomType/detail?id=<%= roomType._id %>">
+  <table class="table caption-top">
+  <tr class="tableRow">
+  <th>Room Name</th>
+  <th>Room Price</th>
+  <th>Description</th>
+  <th>Delete</th>
+  <th>Edit</th>
+  </tr>
+  
+  <hr>
+  <% roomTypes.forEach(function(roomType) {%>
+  
+      <tr>
+         <td> <a href="/roomType/detail?id=<%= roomType._id %>">
+  
+           <%= roomType.type %></a></td>
+           <td><%= roomType.roomPrice %> </td>
+           
+           <td><%= roomType.description%> </td>
+         <td><a href="/roomType/delete?id=<%= roomType._id %>" class="btn btn-primary">Delete</a></td>
+           <td><a href="/roomType/edit?id=<%= roomType._id %>" class="btn btn-primary">Edit</a></td>
+            
+       
+      </tr>
+  
+  <% }) %>
+  
+  </table>
+    
 
-         <%= roomType.type %></a></td>
-         <td><%= roomType.roomPrice %> </td>
-         
-         <td><%= roomType.description%> </td>
-       <td><a href="/roomType/delete?id=<%= roomType._id %>" class="btn btn-primary">Delete</a></td>
-         <td><a href="/roomType/edit?id=<%= roomType._id %>" class="btn btn-primary">Edit</a></td>
-          
-     
-    </tr>
-
-<% }) %>
-
-</table>
+</body>
+</html>
