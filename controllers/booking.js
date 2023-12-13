@@ -33,10 +33,13 @@ exports.booking_check_create_post = (req,res)=>{
         for(let i=0;i<room.length;i++){
             // Count the number of rooms        
             let roomTypeKey = room[i].RoomType.type;
-
+console.log(roomTypeKey);
             // If the room has already been seen, add to the count, else create the new room type
             if(typesCount.hasOwnProperty(roomTypeKey)){
                 typesCount[roomTypeKey] += 1;
+            }else if(roomTypeKey === null){
+                typesCount[roomTypeKey] = 1;
+
             }else{
                 typesCount[roomTypeKey] = 1;
             }

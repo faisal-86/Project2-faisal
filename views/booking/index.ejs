@@ -12,7 +12,7 @@
 <% bookings.forEach(function(booking){%>
 <tr>
 <td><a href="/booking/detail?id=<%=booking._id %>">Review Details</a></td>
-<td><%=booking.RoomType.type%></td>
+<td><%=//booking.RoomType.type%></td>
 <td><%= dayjs(booking.checkIn).format('MM/DD/YYYY')  %></td>
 <td><%= dayjs(booking.checkOut).format('MM/DD/YYYY')  %></td>
 <td><a href="/booking/delete?id=<%=booking._id %>" class="btn btn-primary">Delete</a></td>
