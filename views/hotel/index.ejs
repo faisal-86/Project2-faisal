@@ -1,14 +1,9 @@
-<div class="hotelLogo">
- <img class="logos" src="/uploads/Screenshot (4).png">
-</div>
 
-<div class="hotelIndexPage">
+
 <% hotels.forEach(function(hotel){ %>
-        
 <h1>Welcome to The <%= hotel.hotelName %></h1>
         <h2>Hotel Address</h2>
         <h3><%= hotel.address %></h3>
         <h2>Hotel Phone Number</h2>
         <h3><%= hotel.phoneNum %></h3>
 <% }) %>
-</div>
