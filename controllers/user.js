@@ -72,6 +72,11 @@ exports.user_create_get = (req, res) => {
 
   exports.user_update_put = (req, res) => {
     console.log(req.body.id);
+    console.log(req.body);
+    console.log(req.file);
+
+    req.body.avatar = "/uploads/avatars/" + req.file.filename
+
     User.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {
       res.redirect("/user/index");

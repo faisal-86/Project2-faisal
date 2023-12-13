@@ -26,8 +26,6 @@ var storage = multer.diskStorage({
 
 
 
-
-
 //routes
 router.get("/add", roomTypeCrl.roomType_create_get);
 router.post("/add", roomTypeCrl.roomType_create_post);

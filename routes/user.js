@@ -18,30 +18,17 @@ const userCntrl = require("../controllers/user");
 
 
 
-
-
-
-// // Multer
-// const multer = require('multer');
-// var storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//       cb(null, './public/uploads/')
-//     },
-//     filename: function (req, file, cb) {
-//       cb(null, file.fieldname + '-' + Date.now() + '-' + file.originalname)
-//     }
-//   })
-//   const User = require('../models/User');
-
-// const getUserData = async (req, res, next) => {
-//   if (req.isAuthenticated()) {
-//     const user = await User.findById(req.user._id);
-//     res.locals.currentUser = user; // Make user data available in templates
-//   }
-//   next();
-// };
-
-// module.exports = getUserData;
+// Multer
+const multer = require('multer');
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/uploads/avatars')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now() + '-' + file.originalname)
+    }
+  })
+  let upload = multer({ storage: storage })
 
 
 
@@ -53,11 +40,9 @@ router.post("/add", isAdmin, isLoggedIn, userCntrl.user_create_post);
 router.get("/index",  isAdmin, isLoggedIn, userCntrl.user_index_get);
 router.get("/detail", isLoggedIn, userCntrl.user_show_get);
 router.get("/delete", isAdmin, isLoggedIn, userCntrl.user_delete_get);
-router.get("/edit", isAdmin, isLoggedIn, userCntrl.user_edit_get);
+router.get("/edit", isLoggedIn, userCntrl.user_edit_get);
 
-router.put("/update",  isLoggedIn, userCntrl.user_update_put);
-
-
+router.put("/update", upload.single('avatar'), isLoggedIn, userCntrl.user_update_put);
 
 
 

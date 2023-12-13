@@ -1,6 +1,6 @@
 <h1>Edit User</h1>
 
-<form method="POST" action="/user/update?_method=PUT">
+<form method="POST" action="/user/update?_method=PUT" enctype="multipart/form-data">
     <div>
         <label>Name</label>
         <input type="text" name="name"  value="<%= user.name %>">
@@ -16,17 +16,21 @@
         <input type="text" name="phoneNum" value="<%= user.phoneNum %>">
     </div>
 
+    
+
     <div>
         <label>Role</label>
-        <select name="role">
+        <select name="role" <%= user.role === 'admin' ? '' : 'disabled' %>>
             <option value="guest" <%= user.role === 'guest' ? 'selected' : '' %>>Guest</option>
             <option value="admin" <%= user.role === 'admin' ? 'selected' : '' %>>Admin</option>
         </select>
     </div>
 
+
+
     <div>
         <label>Upload Avatar</label>
-        <input type="file" name="images" accept="avatar/*">
+        <input type="file" name="avatar" accept="image/*">
       </div>
 
 
