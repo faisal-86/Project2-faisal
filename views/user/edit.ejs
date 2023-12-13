@@ -3,7 +3,7 @@
     <div class="background0">
 <div class="userPageInfo">
 <h1>Edit User</h1>
-<form method="POST" action="/user/update?_method=PUT">
+<form method="POST" action="/user/update?_method=PUT" enctype="multipart/form-data">
     <div>
         <label>Name</label>
         <input type="text" name="name"  value="<%= user.name %>">
