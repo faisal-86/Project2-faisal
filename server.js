@@ -1,6 +1,8 @@
 // server.js
 // Require dependencies
 const express = require('express');
+const session = require("express-session");
+const passport = require("passport")
 
 
 
@@ -44,11 +46,27 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
 //-------------------------//
 
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport')
+
+app.use(function(req,res,next){
+  res.locals.user = req.user;
+  next();
+})
+
 
 
 
 //------- Mount routes -------//
 // Your code goes here
+const indexRouter = require("./routes/index");
 const hotelRouter = require("./routes/hotel");
 const roomTypeRouter = require("./routes/roomType") //(upload);
 const userRouter = require("./routes/user")
@@ -57,7 +75,7 @@ const bookingRouter = require("./routes/booking")
 
 
 
-
+app.use('/',indexRouter)
 app.use("/hotel", hotelRouter);
 app.use("/roomType", roomTypeRouter);
 app.use("/user", userRouter);
