@@ -2,7 +2,7 @@
 <form method="POST" action="/booking/add">
     <div>
       <label>Room Type</label>
-      <select name="RoomType" class="form-control">
+      <select name="RoomType" class="form-control" required>
           <%roomTypes.forEach(function(RoomType){%>
               <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
           <% }) %>
