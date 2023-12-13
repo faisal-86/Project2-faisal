@@ -17,10 +17,15 @@ dayjs.extend(relativeTime)
   }
 
 exports.booking_create_get = (req,res)=>{
-      RoomType.find()
-  .then((roomTypes) => {
-      console.log(roomTypes);
-      res.render("booking/add", {roomTypes});
+      RoomType.find().populate({
+        path:'RoomType',
+        populate: {
+            path: 'rooms'
+        }
+    })
+  .then((roomTypes, bookings) => {
+      console.log(roomTypes, bookings);
+      res.render("booking/add", {roomTypes, bookings});
   })
   .catch((err) => {
       console.log(err);
@@ -55,9 +60,13 @@ exports.booking_create_get = (req,res)=>{
   
   exports.booking_show_get = (req,res)=>{
       console.log(req.query.id);
-      Booking.findById(req.query.id).populate('RoomType')
+      Booking.findById(req.query.id).populate({
+        path:'RoomType',
+        populate: {
+            path: 'rooms'
+        }
+    })
       .then((bookings)=>{
-          console.log(bookings)
           res.render("booking/detail", {bookings, dayjs}) 
       })
       .catch(err=>{

@@ -8,11 +8,7 @@ const roomTypeSchema = mongoose.Schema({
  rooms:[{
     type: mongoose.Schema.Types.ObjectId,
     ref: "Rooms"
-}],
-Booking:{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Booking"
-}
+}]
 
 
 },{timestamps: true
