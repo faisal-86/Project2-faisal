@@ -68,9 +68,12 @@ exports.roomType_edit_get = (req,res)=>{
 exports.roomType_update_put = (req,res)=>{
     console.log(req.body.id);
     console.log(req.body);
+
+    if (req.file) {
     console.log(req.file);
 
     req.body.images = "/uploads/" + req.file.filename
+    }
 
     RoomType.findByIdAndUpdate(req.body.id, req.body)
     .then(()=>{
@@ -80,7 +83,6 @@ exports.roomType_update_put = (req,res)=>{
         console.log(err);
     })
 }
-
 
 
 

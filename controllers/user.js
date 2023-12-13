@@ -70,19 +70,38 @@ exports.user_create_get = (req, res) => {
     })
   }
 
+  // exports.user_update_put = (req, res) => {
+  //   console.log(req.body.id);
+  //   console.log(req.body);
+  //   console.log(req.file);
+
+  //   req.body.avatar = "/uploads/avatars/" + req.file.filename
+
+  //   User.findByIdAndUpdate(req.body.id, req.body)
+  //   .then(() => {
+  //     res.redirect("/user/index");
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   })
+  // }
+
+
   exports.user_update_put = (req, res) => {
     console.log(req.body.id);
     console.log(req.body);
-    console.log(req.file);
 
-    req.body.avatar = "/uploads/avatars" + req.file.filename
+    // Check if req.file exists before accessing its properties
+    if (req.file) {
+        console.log(req.file);
+        req.body.avatar = "/uploads/avatars/" + req.file.filename;
+    }
 
     User.findByIdAndUpdate(req.body.id, req.body)
-    .then(() => {
-      res.redirect("/user/index");
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }
-
+        .then(() => {
+            res.redirect("/user/index");
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
