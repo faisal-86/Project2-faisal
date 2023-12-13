@@ -35,24 +35,12 @@ var storage = multer.diskStorage({
 
 
 // routes
-<<<<<<< HEAD
-router.get("/add", userCntrl.user_create_get);
-router.post("/add",userCntrl.user_create_post);
-router.get("/index",    userCntrl.user_index_get);
-router.get("/detail", userCntrl.user_show_get);
-router.get("/delete",  userCntrl.user_delete_get);
-router.get("/edit", userCntrl.user_edit_get);
-
-router.put("/update",  userCntrl.user_update_put);
-
-=======
 router.get("/add", isAdmin, isLoggedIn, userCntrl.user_create_get);
 router.post("/add", isAdmin, isLoggedIn, userCntrl.user_create_post);
 router.get("/index",  isAdmin, isLoggedIn, userCntrl.user_index_get);
 router.get("/detail", isLoggedIn, userCntrl.user_show_get);
 router.get("/delete", isAdmin, isLoggedIn, userCntrl.user_delete_get);
 router.get("/edit", isLoggedIn, userCntrl.user_edit_get);
->>>>>>> 51f99dbeccc3b5f432b64784bf1e7bda40c68d33
 
 router.put("/update", upload.single('avatar'), isLoggedIn, userCntrl.user_update_put);
 
