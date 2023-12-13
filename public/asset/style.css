@@ -319,18 +319,135 @@ width: 600px;
 }
 
 .tableRow a:hover {
-    color: blue;
+    color: #007BFF;
 }
 
 .headerTitle {
     margin-bottom: 15px;
 }
 
+/* end of the page  */
+
+/* roomType detail page  */
+
+.roomTypePageCon{
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url("../uploads/66440.jpg");
+    border: 15px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.roomTypedes{
+    font-size: 24px;
+    padding: 85px;
+    display: grid;
+
+}
+
+/* Title */
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Text */
+p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List Item */
+li {
+    margin-bottom: 10px;
+}
+
+/* Image */
+.mainImage {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* end of the page  */
+
+/* RoomType Edit page  */
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
+   }
+   .roomTypeEdith1{
+    padding: 20px 20px;
+   }
+   
 
+   .wrapper {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+   }
+   
 
+   form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+
+   label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+   }
+
+   input[type="text"],
+   input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    margin-bottom: 20px;
+   }
+   
+  
+   input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   }
+   
+   input[type="submit"]:hover {
+    background-color: #555;
+   }
 
 
 
