@@ -1,10 +1,13 @@
 const {Booking} = require("../models/Booking");
 const {RoomType} = require('../models/RoomType');
+const dayjs = require('dayjs')
+var relativeTime = require('dayjs/plugin/relativeTime')
+dayjs.extend(relativeTime)
 
  exports.booking_index_get = (req,res)=>{
       Booking.find().populate('RoomType')
       .then((bookings)=>{
-          res.render("booking/index",{bookings})
+          res.render("booking/index",{bookings, dayjs})
       })
       .catch((err)=>{
           console.log(err)
@@ -14,10 +17,15 @@ const {RoomType} = require('../models/RoomType');
   }
 
 exports.booking_create_get = (req,res)=>{
-      RoomType.find()
-  .then((roomTypes) => {
-      console.log(roomTypes);
-      res.render("booking/add", {roomTypes});
+      RoomType.find().populate({
+        path:'RoomType',
+        populate: {
+            path: 'rooms'
+        }
+    })
+  .then((roomTypes, bookings) => {
+      console.log(roomTypes, bookings);
+      res.render("booking/add", {roomTypes, bookings});
   })
   .catch((err) => {
       console.log(err);
@@ -52,10 +60,14 @@ exports.booking_create_get = (req,res)=>{
   
   exports.booking_show_get = (req,res)=>{
       console.log(req.query.id);
-      Booking.findById(req.query.id).populate('RoomType')
+      Booking.findById(req.query.id).populate({
+        path:'RoomType',
+        populate: {
+            path: 'rooms'
+        }
+    })
       .then((bookings)=>{
-          console.log(bookings)
-          res.render("booking/detail", {bookings}) 
+          res.render("booking/detail", {bookings, dayjs}) 
       })
       .catch(err=>{
           console.log(err)
