@@ -173,7 +173,7 @@ exports.booking_delete_get = (req, res) =>{
           roomTypes => {
               Booking.findById(req.query.id).populate('RoomType')
               .then((bookings)=>{
-                  res.render('booking/edit',{bookings, roomTypes});
+                  res.render('booking/edit',{bookings, roomTypes, dayjs});
               })
               .catch((err)=>{
                   console.log(err);
