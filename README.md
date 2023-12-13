@@ -26,7 +26,7 @@ This project is a Hotel Booking System built using Express.js, Node.js, MongoDB,
 ## Usage
 
 - **User Access:**
-  - Visit the homepage, browse available hotels, and make bookings.
+  - Visit the homepage, browse available rooms, and make bookings.
   - Leave reviews for rooms after your stay.
   - Edit or delete your own reviews.
 
