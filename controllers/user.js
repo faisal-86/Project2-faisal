@@ -75,7 +75,7 @@ exports.user_create_get = (req, res) => {
     console.log(req.body);
     console.log(req.file);
 
-    req.body.avatar = "/uploads/avatars/" + req.file.filename
+    req.body.avatar = "/uploads/avatars" + req.file.filename
 
     User.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {

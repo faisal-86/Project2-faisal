@@ -1,0 +1,27 @@
+
+
+
+
+
+<nav>
+    <ul>
+        <% if (user) { %>
+            <li><a href="/hotel/index" class="logo-link"><img src="\uploads\git-guardians-logo.png" alt="Logo" class="logo-img"></a></li>
+            <li class="nav-item"><a href="/hotel/index" >Home</a></li>
+            <li class="nav-item"><a href="/user/detail?id=<%=  user._id %>"> 
+                <%= user.name %></a></li>
+                
+                <img src="<%= user.avatar %>" alt="User Avatar" class="avatar">
+               <li class="nav-item"> <a href="/logout">Logout</a> </li>
+               
+            
+            <!-- Add more navigation links as needed -->
+        <% } else { %>
+            <!-- Add links for non-logged-in users if needed -->
+            <li><a href="/hotel/index" class="logo-link"><img src="\uploads\git-guardians-logo.png" alt="Logo" class="logo-img"></a></li>
+
+            <li><a href="/auth/google" class="nav-item">Login</a></li>
+            
+        <% } %>
+    </ul>
+</nav>

@@ -1,39 +1,33 @@
 
-
-<% hotels.forEach(function(hotel){ %>
-<h1>Welcome to The <%= hotel.hotelName %></h1>
-        <h2>Hotel Address</h2>
-        <h3><%= hotel.address %></h3>
-        <h2>Hotel Phone Number</h2>
-        <h3><%= hotel.phoneNum %></h3>
-<% }) %>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
-    
-        <div><h1><a href="/hotel/index" class="noStyle">Hotel App</a></h1></div>
-        <nav>
-    
-            <% if(user) {%>
-    
-    
-            <a href="/rooms/index" class="btn btn-outline-primary">Rooms</a>
-            <a href="/rooms/add" class="btn btn-outline-primary">Add Room</a>
-            <a href="/user/detail?id=<%=  user._id %>"> 
-                <%= user.name %></a>
-            <a href="/logout">Logout</a>
-            <% } else { %>
-                <a href="/user/index" class="btn btn-outline-primary">Users</a>
-               
-                <a href="/auth/google">Login</a>
-                
-                <% } %>
-        </nav>
-        <hr>
-    
-       
 
+    <div class="hotel-info">
 
+    <% hotels.forEach(function(hotel){ %>
+        <h1>Welcome to The <%= hotel.hotelName %></h1>
+                <h2>Hotel Address</h2>
+                <h3><%= hotel.address %></h3>
+                <h2>Hotel Phone Number</h2>
+                <h3><%= hotel.phoneNum %></h3>
+        <% }) %>
+    </div>
+
+    <style>
+
+    .hotel-info{
         
-    </body>
+    margin-top: 20px;
+    text-align: center;
+    }
+    </style>
+    
+</body>
+</html>
+
