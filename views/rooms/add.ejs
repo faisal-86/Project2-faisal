@@ -6,11 +6,11 @@
   
     <div>
       <label>Room Number</label>
-      <input type="number" name="roomNum" class="form-control" />
+      <input type="number" name="roomNum" class="form-control" required/>
     </div>
     <div>
       <label>Room Type</label>
-      <select name="RoomType" class="form-control">
+      <select name="RoomType" class="form-control" required>
           <%roomTypes.forEach(function(RoomType){%>
               <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
           <% }) %>

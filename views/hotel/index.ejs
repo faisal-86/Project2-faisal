@@ -1,9 +1,14 @@
-    <div class="hotel-info">
-    <% hotels.forEach(function(hotel){ %>
-        <h1>Welcome to The <%= hotel.hotelName %></h1>
-                <h2>Hotel Address</h2>
-                <h3><%= hotel.address %></h3>
-                <h2>Hotel Phone Number</h2>
-                <h3><%= hotel.phoneNum %></h3>
-        <% }) %>
+<% hotels.forEach(function(hotel){ %>
+<div class="hotel">
+    <div class="d-flex hero text-center">
+    <h1 class="">Welcome To The <%= hotel.hotelName %></h1>
     </div>
+</div>
+<div class="hotel_info">
+    <div class="d-flex justify-content-evenly">
+    <h3 class="d-inline">Hotel Phone Number: <%= hotel.phoneNum %></h3>
+    <br>
+    <h3 class="d-inline">Hotel Address: <%= hotel.address %></h3>
+    </div>
+</div>
+<% }) %>

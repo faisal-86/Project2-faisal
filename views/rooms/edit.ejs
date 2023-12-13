@@ -2,11 +2,11 @@
 <form method="POST" action="/rooms/update">
     <div>
       <label>Room Number</label>
-      <input type="number" name="roomNum" class="form-control" value="<%= rooms.roomNum %>">
+      <input type="number" name="roomNum" class="form-control" value="<%= rooms.roomNum %>"  required>
     </div>
     <div>
       <label>Room Type</label>
-      <select name="RoomType" class="form-control" id="mySelect">
+      <select name="RoomType" class="form-control" id="mySelect"  required>
         <optgroup>
           <option value="<%= rooms.RoomType._id %>"><%= rooms.RoomType.type %></option>
         </optgroup>
