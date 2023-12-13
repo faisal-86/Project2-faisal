@@ -17,7 +17,13 @@ dayjs.extend(relativeTime)
   
   }
 
-exports.booking_create_first_get = (req,res)=>{
+exports.booking_check_create_get = (req,res)=>{
+    res.render("booking/check")
+}
+exports.booking_check_create_post = (req,res)=>{
+   
+    console.log("Create GEt")
+
     Rooms.find().populate('RoomType')
   .then((room) => {
       console.log(room);
@@ -38,8 +44,8 @@ exports.booking_create_first_get = (req,res)=>{
         console.log("Rooms in the Building",typesCount);
 
         // Temporary hardcoded variables
-        const requestedCheckin = new Date("2023-12-13");
-        const requestedCheckOut = new Date("2023-12-15");
+        const requestedCheckin = new Date(req.body.checkIn);
+        const requestedCheckOut = new Date(req.body.checkOut);
 
         // Get tbe bookings that overlap with the desired dates
         Booking.find({
@@ -71,29 +77,46 @@ exports.booking_create_first_get = (req,res)=>{
                   
             }
 
+
+
             console.log("Rooms Available",typesCount);
 
-            res.render("booking/add", {roomTypes: rooms});
+            const typesCountArray = Object.keys(typesCount)
 
-        });
+            console.log("Rooms Available Array",typesCountArray);
 
 
-  })
-  .catch((err) => {
-      console.log(err);
-  })   
-  }
-  exports.booking_create_second_get = (req,res)=>{
-    RoomType.find()
-.then((roomTypes) => {
-    console.log(roomTypes);
-    res.render("booking/add", {roomTypes});
-})
-.catch((err) => {
-    console.log(err);
-})   
+            //res.render("booking/add", {roomTypes: room, typesCountArray});
+
+            RoomType.find({
+                type: {$in: typesCountArray}
+            })
+            .then((roomTypes) => {
+                console.log(roomTypes);
+                res.render("booking/add", {roomTypes, requestedCheckin, requestedCheckOut});
+            })
+            .catch((err) => {
+                console.log(err);
+            })   
+            
+             });
+            
+            
+              })
+              .catch((err) => {
+                  console.log(err);
+              })   
+              }
+           
+              
+
+exports.booking_create_get = (req,res)=>{
+    res.render("booking/add")
+
 }
-  exports.booking_create_first_post = (req,res)=>{
+
+  exports.booking_create_post = (req,res)=>{
+    console.log(req.body)
     let bookings = new Booking(req.body);
     bookings.save()
       .then(() => {
@@ -110,37 +133,14 @@ exports.booking_create_first_get = (req,res)=>{
         // return roomType.save();
       })
       .then(() => {
-        res.redirect("/booking/booking");
+        res.redirect("/booking/index");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch((err) => {
+        console.log(err);
       });
     
     }
-    exports.booking_create_second_post = (req,res)=>{
-        let bookings = new Booking(req.body);
-        bookings.save()
-          .then(() => {
-            return RoomType.findById(req.body.RoomType);
-          })
-          .then((roomType) => {
-            if (!roomType) {
-              res.send('Please Try Again !')
-            }
-            console.log(bookings);
-            // Check if roomType.bookings is array or make it an empty array
-            roomType.bookings = Array.isArray(roomType.bookings) ? roomType.bookings : [];
-            roomType.bookings.push(bookings);    
-            // return roomType.save();
-          })
-          .then(() => {
-            res.redirect("/booking/index");
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-        
-        }
+
   
   exports.booking_show_get = (req,res)=>{
       console.log(req.query.id);
