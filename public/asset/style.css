@@ -2,7 +2,7 @@
 
 .hotelLogo{
     height: 100px;
-    background-color:black ;
+    background-color:#ababab ;
 }
 
 
@@ -10,80 +10,82 @@
 /* End of the page */
 
 /* user add page */
-.userAddLogo{
-    height: 100px;
-background-color:black ;
-}
-.logos{
-    height: 100px;
-    max-width:fit-content ;
+.userAddPageCon{
+    font-family: Arial, sans-serif;
+    padding: 20px 20px;
+    display: grid;
+    background-image: url("../uploads/66440.jpg");
 
 }
-.userAddPage {
+.userAddPage{
+    color: aliceblue;
     margin: 0;
     padding: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("/uploads/5040007.jpg");
     background-size: cover;
-    backdrop-filter: blur(10px);
+    text-align: center;
+
+}
+.logoCon {
+    float: left;
+    margin: 20px;
+}
+.addPageForm{
+    margin: 30px;
+    color: black;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.9;
+    text-align: left;
+    padding: 50px;
+    border-radius: 30px;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 63px 109px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.userAddPageCon {
-    width: 50%;
-    padding: 20px;
-    border: 2px solid black;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+.logos {
+    max-width: 100px; 
+    max-height: 100px; 
 }
 
-.row {
-    display: flex;
-    margin-bottom: 10px;
-}
 
-.col {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.col-5 {
-    flex: 1;
-}
-
-.form-control {
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 10px;
-}
 /* End of the page */
 
+
+
+
 /* User index page  */
-.logoUserIndex{
-    height: 100px;
-    background-color:black ;
+.userIndex{
+    font-family: Arial, sans-serif;
+    height: 151px;
+    width: auto;
+    text-align: center;
 }
+
 .userH1{
 padding: 20px; 
-color: aliceblue;
+color: black;
 }
 .userIndexPage{
     color: aliceblue;
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url("/uploads/5040007.jpg");
     background-size: cover;
+}
+
+.logos{
+    width: fit-content;
+    height: 105px;
 }
 
 .userIndexPageCon{
 padding: 20px 20px;
+display: grid;
+ background-image: url("../uploads/66440.jpg");
+
   
 }
 
@@ -91,16 +93,147 @@ table{
     width: max-content;
 
 }
+.btn{
+
+}
 
 /* End of the page  */
 
+
+
+
+
+/* user details  page  */
+
+.userDetailPageCon{
+font-family: Arial, sans-serif;
+height: 100vh;
+background-image: url("../uploads/66440.jpg");
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f4f4f4;
+}
+.userDetailPage{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+border: 1px solid black;
+opacity: 0.9;
+text-align: left;
+padding: 50px;
+border-radius: 30px;
+width: auto;
+background-color: rgba(255, 255, 255, 0.5);
+padding: 63px 109px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.avatar{
+    float: right;
+}
+
+.avatar img{
+width: 100px;
+height: 100px; 
+border-radius: 50%;
+}
+
+
+
+
+
+
+/* End of the page  */
+
+
+
+/* user Edit page  */
+/* body {
+    font-family: Arial, sans-serif;
+} */
+
+.userEditPageCon {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../uploads/66440.jpg");
+}
+
+.userPageInfo {
+    margin-right: 100px;
+    width: 400px;
+
+}
+.background0{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+border: 1px solid black;
+opacity: 0.9;
+text-align: left;
+padding: 50px;
+border-radius: 30px;
+width: auto;
+background-color: rgba(255, 255, 255, 0.5);
+padding: 63px 109px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 53px;
+}
+
+.inputs > div {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select, input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* End of the page  */
+
+
+
 /* rooms index page  */
+
 .roomsIndexLogo{
-    height: 100px;
-    background-color:black ;
+    height: 151px;
+    width: auto;
+    background-color: #ababab;
 }
 .roomsIndexPage{
-    background-image: url("../uploads/pasted\ image\ 0.png");
+    font-family: Arial, sans-serif;
+    background-image: url("../uploads/66440.jpg");
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -112,6 +245,7 @@ table{
     height: 100vh;
 }
 .roomsIndexH1{
+    
     
 }
 .roomsIndexTable{
@@ -128,3 +262,78 @@ width: 600px;
 
 
 /* End of the page  */
+
+
+/* RoomType Index page  */
+body {
+    
+}
+
+.roomTypeIndex {
+    height: 100vh;
+    margin: 0;
+    background-image: url("../uploads/66440.jpg");
+    font-family: Arial, sans-serif;
+    padding-top: 72px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+.background01{
+    display: grid;
+    grid-template-rows: 1fr;
+    border: 1px solid black;
+    opacity: 0.9;
+    text-align: left;
+    padding: 50px;
+    border-radius: 30px;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 63px 109px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.tableRow:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tableRow:hover {
+    background-color: #ddd;
+}
+
+.tableRow a {
+    color: black;
+    text-decoration: none;
+}
+
+.tableRow a:hover {
+    color: blue;
+}
+
+.headerTitle {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* end of the page  */

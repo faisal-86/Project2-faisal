@@ -1,5 +1,8 @@
-<h1>Edit User</h1>
 
+<div class="userEditPageCon">
+    <div class="background0">
+<div class="userPageInfo">
+<h1>Edit User</h1>
 <form method="POST" action="/user/update?_method=PUT">
     <div>
         <label>Name</label>
@@ -15,7 +18,9 @@
         <label>Phone Number</label>
         <input type="text" name="phoneNum" value="<%= user.phoneNum %>">
     </div>
+</div>
 
+<div class="inputs">
     <div>
         <label>Role</label>
         <select name="role">
@@ -33,5 +38,7 @@
     <input type="hidden" name="id" value="<%= user._id %>">
 
 <button type="submit">Update User</button>
-
+</div>
 </form>
+ </div>
+</div>

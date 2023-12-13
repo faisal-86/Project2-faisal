@@ -48,14 +48,14 @@ const userCntrl = require("../controllers/user");
 
 
 // routes
-router.get("/add", isAdmin, isLoggedIn, userCntrl.user_create_get);
-router.post("/add", isAdmin, isLoggedIn, userCntrl.user_create_post);
-router.get("/index",  isAdmin, isLoggedIn, userCntrl.user_index_get);
-router.get("/detail", isLoggedIn, userCntrl.user_show_get);
-router.get("/delete", isAdmin, isLoggedIn, userCntrl.user_delete_get);
-router.get("/edit", isAdmin, isLoggedIn, userCntrl.user_edit_get);
+router.get("/add", userCntrl.user_create_get);
+router.post("/add",userCntrl.user_create_post);
+router.get("/index",    userCntrl.user_index_get);
+router.get("/detail", userCntrl.user_show_get);
+router.get("/delete",  userCntrl.user_delete_get);
+router.get("/edit", userCntrl.user_edit_get);
 
-router.put("/update",  isLoggedIn, userCntrl.user_update_put);
+router.put("/update",  userCntrl.user_update_put);
 
 
 

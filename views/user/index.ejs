@@ -1,12 +1,13 @@
-  <div class="logoUserIndex">
-    <img class="logos" src="/uploads/Screenshot (4).png">
+<div class="userIndexPageCon">
+
+    <div class="logoCon">
+  <img class="logos" src="/uploads/git-guardians.png">
   </div>
 
-  <div class="userIndexPage">
-    <div class="userIndexPageCon">
+   <div class="userIndexPage">
   <h1 class="userH1">Users List</h1>
  
-  <table class="table table-dark table-striped-columns">
+  <table class="table table-hover">
     <tr>
         <th>Avatar</th>
         <th>Name</th>
@@ -28,15 +29,23 @@
     
             <td><%= user.email %></td>
             <td><%= user.phoneNum %></td>
-<<<<<<< HEAD
             <td><%= user.role %></td>
 
-=======
->>>>>>> b128808ca51096a414abbd68c5b1317a99074189
-           <td><a href="/user/delete?id=<%= user._id %>">Delete</a></td> 
-           <td><a href="/user/edit?id=<%= user._id %>">Edit</a></td>
+           <td>
+              <a class="link-underline-dark" href="/user/delete?id=<%= user._id %>">
+                <button>
+                Delete
+              </button></a>
+          </td>
+          
+         
+          <td><a class="link-underline-dark" href="/user/edit?id=<%= user._id %>">
+          <button>
+            Edit
+          </button></a></td>
+  
         </tr>
     <%}) %>
     </table>
-  
-</div></div>
+</div>
+</div>
