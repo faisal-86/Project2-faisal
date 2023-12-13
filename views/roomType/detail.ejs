@@ -1,20 +1,24 @@
-<div>
+
+<div class="roomTypePageCon">
+    <div class="roomTypedes">
+<div class="roomName">
     Room Name: <%= roomType.type %>
 </div>
 
-<div>
-    Room Price: <%= roomType.roomPrice %>
+<div calss="roomPrice">
+    Room Price: <%= roomType.roomPrice %> $
 </div>
 
-<div>
+<div class="roomDesc">
     Description: <%= roomType.description %>
 </div>
-
+</div>
 
 
 <div>
     <h2>Images</h2>
     <ul>
-        <li><img src="<%= roomType.images %>" alt="Room Image"></li>
+        <li><img class="mainImage" src="<%= roomType.images %>" alt="Room Image"></li>
     </ul>
+</div>
 </div>
