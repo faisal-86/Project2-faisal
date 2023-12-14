@@ -1,5 +1,5 @@
-<div class="roomsIndexPage">
-  <div class="roomsIndexPageCon">
+<div class="bookingCon">
+  <div class="bookingIndexCon">
 <h1 class="roomsIndexH1">Room List</h1>
 
 <div class="roomsIndexTable">
@@ -12,8 +12,8 @@
 
 <% rooms.forEach(room => { %><tr>
     <td><a href="/rooms/detail?id=<%= room._id %>"><%= room.roomNum %></a></td>
-      <td><a href="/rooms/delete?id=<%= room._id %>">Delete</a></td>
-    <td><a href="/rooms/edit?id=<%= room._id %>">Edit</a></td>
+      <td><a href="/rooms/delete?id=<%= room._id %>" class="btn btn-primary">Delete</a></td>
+    <td><a href="/rooms/edit?id=<%= room._id %>" class="btn btn-primary">Edit</a></td>
 
   </tr>
 <% }); %>
