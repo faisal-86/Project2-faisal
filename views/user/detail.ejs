@@ -12,6 +12,17 @@
        <h3><%= user.name %></h3>
       <div>Email Address: <%= user.email %></div>
       <div>Phone Number: <%= user.phoneNum %></div>
+
+      <a class="link-underline-dark" href="/user/edit?id=<%= user._id %>">
+        <button class="btn btn-primary">
+          Edit Details
+        </button></a>
     </div>
     </div>
   </div>
+
+  <style>
+    button {
+      margin-top: 10px;
+    }
+  </style>
