@@ -1,6 +1,12 @@
-<h2>Room Name: <%= bookings.RoomType.type%></h2>
+
 <% //bookings.RoomType.rooms.forEach((rooms) => { %>
 <!-- <h2>Room Number: <%= //bookings.RoomType.rooms[0].id%></h2> -->
 <% //}) %>
-<h3>Checking In At: <%= dayjs(bookings.checkIn).format('MM/DD/YYYY')  %></h3>
-<h3>Checking Out At: <%= dayjs(bookings.checkOut).format('MM/DD/YYYY')  %></h3>
+
+<div class="bookingDetails">
+    <div class="bookingDetailsCon">
+<div class="pageH3">Room Name: <%= bookings.RoomType.type%></div>
+<div class="pageH3">Checking In At: <%= dayjs(bookings.checkIn).format('MM/DD/YYYY')  %></div>
+<div class="pageH3">Checking Out At: <%= dayjs(bookings.checkOut).format('MM/DD/YYYY')  %></div>
+</div>
+</div>

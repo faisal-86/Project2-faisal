@@ -1,4 +1,4 @@
-/* Hotel index page  */
+/* 
 
 .hotelLogo{
     height: 100px;
@@ -7,9 +7,6 @@
 
 
 
-/* End of the page */
-
-/* user add page */
 .userAddPageCon{
     font-family: Arial, sans-serif;
     padding: 20px 20px;
@@ -57,7 +54,7 @@
 
 
 /* User index page  */
-.userIndex{
+/* .userIndex{
     font-family: Arial, sans-serif;
     height: 151px;
     width: auto;
@@ -84,7 +81,7 @@ color: black;
 .userIndexPageCon{
 padding: 20px 20px;
 display: grid;
- background-image: url("../uploads/66440.jpg");
+background-image: url("../uploads/66440.jpg");
 
   
 }
@@ -93,17 +90,13 @@ table{
     width: max-content;
 
 }
-.btn{
-
-}
-
-/* End of the page  */
 
 
 
 
 
-/* user details  page  */
+
+
 
 .userDetailPageCon{
 font-family: Arial, sans-serif;
@@ -145,14 +138,6 @@ border-radius: 50%;
 
 
 
-/* End of the page  */
-
-
-
-/* user Edit page  */
-/* body {
-    font-family: Arial, sans-serif;
-} */
 
 .userEditPageCon {
     font-family: Arial, sans-serif;
@@ -220,51 +205,44 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* End of the page  */
 
 
 
-/* rooms index page  */
 
-.roomsIndexLogo{
-    height: 151px;
-    width: auto;
-    background-color: #ababab;
-}
-.roomsIndexPage{
-    font-family: Arial, sans-serif;
-    background-image: url("../uploads/66440.jpg");
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.roomsIndexH1{
-    
-    
-}
-.roomsIndexTable{
-width: 600px;
-
-}
-.roomsIndexPageCon{
-    background-color: white; 
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
+.roomsIndexPage {
+background-color: #f0f0f0; 
+height: 100vh;
+padding: 20px;
+    box-sizing: border-box;
+   }
+   
+   
+   .roomsIndexH1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+   }
+   
+   .table-striped > tbody > tr:nth-child(odd) {
+    background-color: #f4f4f4;
+   }
+   
+   .delete-btn,
+   .edit-btn {
+    color: #333333;
+    text-decoration: none;
+   }
+   
+   .delete-btn:hover,
+   .edit-btn:hover {
+    color: #2651ee;
+    text-decoration: none;
+   }
 
 
 
-/* End of the page  */
 
 
-/* RoomType Index page  */
 
 
 .roomTypeIndex {
@@ -272,7 +250,6 @@ width: 600px;
     margin: 0;
     background-image: url("../uploads/66440.jpg");
     font-family: Arial, sans-serif;
-    padding-top: 72px;
     margin: 20px;
     font-family: Arial, sans-serif;
 }
@@ -326,15 +303,40 @@ width: 600px;
     margin-bottom: 15px;
 }
 
-/* end of the page  */
 
-/* roomType detail page  */
 
-.roomTypePageCon{
+
+
+
+    .roomsCon {
+        background-image: url("../uploads/66440.jpg");
+        font-family: Arial, sans-serif;
+        font-size: 30px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        padding-left: 290px;
+    }
+    
+       
+       .background02{
+        width: 80%;
+        text-align: center;
+        padding: 116px;
+        background-color: balck;
+        border-radius: 20px;
+        opacity: 0.9;
+        box-shadow: 0 0 10px rgb(0 0 0 / 83%);
+    }
+       
+
+
+.roomTypePageCon{ 
+    background-image: url("../uploads/66440.jpg");
     font-family: Arial, sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-image: url("../uploads/66440.jpg");
     border: 15px solid #e0e0e0;
     border-radius: 5px;
     padding: 20px;
@@ -348,7 +350,7 @@ width: 600px;
 
 }
 
-/* Title */
+
 h2 {
     font-size: 30px;
     font-weight: bold;
@@ -356,25 +358,25 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Text */
+
 p {
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
 }
 
-/* List */
+
 ul {
     list-style-type: none;
     padding: 0;
 }
 
-/* List Item */
+
 li {
     margin-bottom: 10px;
 }
 
-/* Image */
+
 .mainImage {
     width: 100%;
     height: auto;
@@ -383,9 +385,7 @@ li {
 
 }
 
-/* end of the page  */
 
-/* RoomType Edit page  */
 
 
 * {
@@ -450,5 +450,43 @@ li {
    }
 
 
+.bookingCon{
+    background-image: url("../uploads/66440.jpg");
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+.bookingIndexCon{
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+}
 
-/* end of the page  */
+
+
+.bookingDetails {
+    font-family: 'Roboto', sans-serif;
+    padding: 200px;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 26px;
+    background-image: url("../uploads/66440.jpg");
+
+}
+.pageH3 {
+    text-align: center;
+    color: #000000;
+}
+.bookingDetailsCon {
+    display: grid;
+    border: 1px solid black;
+    opacity: 0.9;
+    padding: 50px;
+    border-radius: 30px;
+    padding: 63px 109px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+ */
+
