@@ -1,12 +1,13 @@
+<div class="form_content">
 <h1>Edit Room</h1>
 <form method="POST" action="/rooms/update">
     <div>
       <label>Room Number</label>
-      <input type="number" name="roomNum" class="form-control" value="<%= rooms.roomNum %>">
+      <input type="number" name="roomNum" class="form-control mb-3" value="<%= rooms.roomNum %>"  required>
     </div>
     <div>
       <label>Room Type</label>
-      <select name="RoomType" class="form-control" id="mySelect">
+      <select name="RoomType" class="form-control mb-3" id="mySelect"  required>
         <optgroup>
           <option value="<%= rooms.RoomType._id %>"><%= rooms.RoomType.type %></option>
         </optgroup>
@@ -18,6 +19,7 @@
       </select>
   </div>
   <input type="hidden" name="id" value="<%= rooms._id %>">
-    <button type="submit"  class="btn btn-secondary btn-lg">Edit Room</button>
+    <button type="submit"  class="btn btn-secondary btn-lg btn-lg mb-3">Edit Room</button>
 
   </form>
+  </div>

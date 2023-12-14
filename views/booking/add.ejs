@@ -1,8 +1,9 @@
+<div class="form_content">
 <h1>Add Booking</h1>
 <form method="POST" action="/booking/add">
     <div>
       <label>Room Type</label>
-      <select name="RoomType" class="form-control">
+      <select name="RoomType" class="form-control" required>
           <%roomTypes.forEach(function(RoomType){%>
               <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
           <% }) %>
@@ -10,5 +11,6 @@
   </div>
   <input type="hidden" name="checkIn" value="<%=requestedCheckin%>">
   <input type="hidden" name="checkOut" value="<%=requestedCheckOut%>">
-    <button type="submit" class="btn btn-secondary btn-lg">Add New Booking</button>
+    <button type="submit" class="btn btn-secondary btn-lg mt-3">Add New Booking</button>
   </form>
+</div>

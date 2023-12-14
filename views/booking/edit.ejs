@@ -1,16 +1,17 @@
+<div class="form_content">
 <h1>Edit Booking</h1>
 <form method="POST" action="/booking/update">
     <div>
       <label>Check In Date</label>
-      <input type="date" name="checkIn" class="form-control" value="<%= bookings.checkIn %>">
+      <input type="date" name="checkIn" class="form-control" value="<%= dayjs(bookings.checkIn).format('YYYY-MM-DD')  %>" required>
     </div>
     <div>
         <label>Check Out Date</label>
-        <input type="date" name="checkOut" class="form-control" value="<%= bookings.checkOut %>">
+        <input type="date" name="checkOut" class="form-control" value="<%= dayjs(bookings.checkOut).format('YYYY-MM-DD')  %>" required>
       </div>
     <div>
       <label>Room Type</label>
-      <select name="RoomType" class="form-control">
+      <select name="RoomType" class="form-control" required>
         <optgroup>
           <option value="<%= bookings.RoomType._id %>"><%= bookings.RoomType.type %></option>
         </optgroup>
@@ -22,5 +23,6 @@
       </select>
   </div>
   <input type="hidden" name="id" value="<%= bookings._id %>">
-    <button type="submit"  class="btn btn-secondary btn-lg">Edit Booking</button>
+    <button type="submit"  class="btn btn-secondary btn-lg mt-3">Edit Booking</button>
   </form>
+</div>

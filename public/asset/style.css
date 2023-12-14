@@ -1,12 +1,110 @@
-/* 
-
-.hotelLogo{
-    height: 100px;
-    background-color:#ababab ;
+body{
+    background-color: #f4f4f4;
+    font-size: 1.1vw;
+}
+.footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    position: fixed ;
+    bottom: 0;
+    width: 100%;
+}
+.home_table{
+    width: 100%;
+}
+.home_td{
+    margin: 70px;
+}
+.nav{
+    background-color:#5fabb4 ;
+}
+.hotel{
+    height: 80vh;
+    background: linear-gradient(0deg, rgba(83, 164, 153, 0.514), rgba(79, 171, 159, 0.548)), url("/asset/images/modern-luxury-hotel-office-reception-lounge-with-meeting-room.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.hero{
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero a{
+    font-size: 1.5vw;
+}
+.hero h1{
+    font-size: 4vw;
+}
+.nav-link{
+    color: white;
+}
+.hotel_info{
+    height: auto;
+    padding: 20px;
+    background-color: #5fabb4;
+}
+.hotel_info h3{
+    font-size: 1.2vw;
+    color: black;
+}
+.nav .logo-img {
+    height: 50px;
+    width: auto;
 }
 
+ 
+    nav .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+.form_content{
+    width:60%;
+    margin: 50px auto;
+}
+/* .hotel-info{
+        
+    margin-top: 20px;
+    text-align: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        
+        padding: 10px;
+        background-color: lightgray;
+        color: white;
+    }
+
+    nav .logo-link {
+    margin-right: 1250px; /* Make sure to add units (px, em, etc.) 
+    
+} */
 
 
+
+
+/*
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        margin-left: auto; /* Pushes the links to the right 
+    } */
+/* End of the page */
+
+/* user add page */
 .userAddPageCon{
     font-family: Arial, sans-serif;
     padding: 20px 20px;
@@ -86,10 +184,15 @@ background-image: url("../uploads/66440.jpg");
   
 }
 
-table{
+/* table{
     width: max-content;
 
 }
+.btn{
+
+} */
+
+/* End of the page  */
 
 
 
@@ -139,7 +242,7 @@ border-radius: 50%;
 
 
 
-.userEditPageCon {
+/* .userEditPageCon {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -203,48 +306,51 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #0056b3;
+} */
+
+
+
+
+
+/* .roomsIndexLogo{
+    height: 151px;
+    width: auto;
+    background-color: #ababab;
 }
+.roomsIndexPage{
+    font-family: Arial, sans-serif;
+    background-image: url("../uploads/66440.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.roomsIndexH1{
+    
+    
+}
+.roomsIndexTable{
+width: 600px;
 
-
-
-
-
-.roomsIndexPage {
-background-color: #f0f0f0; 
-height: 100vh;
-padding: 20px;
-    box-sizing: border-box;
-   }
-   
-   
-   .roomsIndexH1 {
-    font-size: 24px;
-    color: #333333;
-    margin-bottom: 20px;
-   }
-   
-   .table-striped > tbody > tr:nth-child(odd) {
-    background-color: #f4f4f4;
-   }
-   
-   .delete-btn,
-   .edit-btn {
-    color: #333333;
-    text-decoration: none;
-   }
-   
-   .delete-btn:hover,
-   .edit-btn:hover {
-    color: #2651ee;
-    text-decoration: none;
-   }
+}
+.roomsIndexPageCon{
+    background-color: white; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+} */
 
 
 
 
 
 
-
+/* 
 .roomTypeIndex {
     height: 100vh;
     margin: 0;
@@ -301,39 +407,11 @@ padding: 20px;
 
 .headerTitle {
     margin-bottom: 15px;
-}
+} */
 
 
 
-
-
-
-    .roomsCon {
-        background-image: url("../uploads/66440.jpg");
-        font-family: Arial, sans-serif;
-        font-size: 30px;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        padding-left: 290px;
-    }
-    
-       
-       .background02{
-        width: 80%;
-        text-align: center;
-        padding: 116px;
-        background-color: balck;
-        border-radius: 20px;
-        opacity: 0.9;
-        box-shadow: 0 0 10px rgb(0 0 0 / 83%);
-    }
-       
-
-
-.roomTypePageCon{ 
-    background-image: url("../uploads/66440.jpg");
+/* .roomTypePageCon{
     font-family: Arial, sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -348,47 +426,48 @@ padding: 20px;
     padding: 85px;
     display: grid;
 
-}
+} */
 
-
-h2 {
+/* Title */
+/* h2 {
     font-size: 30px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
-}
+} */
 
-
-p {
+/* Text */
+/* p {
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
-}
+} */
 
-
-ul {
+/* List */
+/* ul {
     list-style-type: none;
     padding: 0;
-}
+} */
 
-
-li {
+/* List Item */
+/* li {
     margin-bottom: 10px;
-}
+} */
 
-
-.mainImage {
+/* Image */
+/* .mainImage {
     width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-}
+} */
 
 
+/* RoomType Edit page  */
+/* 
 
-
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -405,10 +484,10 @@ li {
     height: 100vh;
     background-color: #f2f2f2;
    }
-   
+   */
 
    form {
-    margin: 20px;
+    margin-top: 20px;
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -422,7 +501,7 @@ li {
     color: #333;
     margin-bottom: 10px;
    }
-
+   
    input[type="text"],
    input[type="file"] {
     width: 100%;
@@ -433,9 +512,11 @@ li {
     color: #333;
     margin-bottom: 20px;
    }
-   
+   input[type="text"]{
+    background-color: white;
+   }
   
-   input[type="submit"] {
+   /* input[type="submit"] {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
@@ -443,7 +524,7 @@ li {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-   }
+   } */
    
    input[type="submit"]:hover {
     background-color: #555;
@@ -488,5 +569,5 @@ li {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
- */
+
 
