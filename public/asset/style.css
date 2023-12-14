@@ -25,6 +25,11 @@
     align-items: center;
     color: white;
     font-weight: bold;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero a{
+    font-size: 1.5vw;
 }
 .hero h1{
     font-size: 4vw;
@@ -40,6 +45,22 @@
 .hotel_info h3{
     font-size: 1.2vw;
     color: black;
+}
+.nav .logo-img {
+    height: 50px;
+    width: auto;
+}
+
+ 
+    nav .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+.form_content{
+    width:60%;
+    margin: 50px auto;
 }
 /* .hotel-info{
         
@@ -61,17 +82,7 @@
     
 } */
 
-.nav .logo-img {
-    height: 50px;
-    width: auto;
-}
 
- 
-    nav .avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    }
 
 
 /*
@@ -482,10 +493,10 @@ width: 600px;
     height: 100vh;
     background-color: #f2f2f2;
    }
-   
+   */
 
    form {
-    margin: 20px;
+    margin-top: 20px;
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -499,7 +510,7 @@ width: 600px;
     color: #333;
     margin-bottom: 10px;
    }
-
+   
    input[type="text"],
    input[type="file"] {
     width: 100%;
@@ -510,9 +521,11 @@ width: 600px;
     color: #333;
     margin-bottom: 20px;
    }
-   
+   input[type="text"]{
+    background-color: white;
+   }
   
-   input[type="submit"] {
+   /* input[type="submit"] {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
@@ -520,12 +533,12 @@ width: 600px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-   }
+   } */
    
    input[type="submit"]:hover {
     background-color: #555;
    }
 
- */
+
 
 /* end of the page  */

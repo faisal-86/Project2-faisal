@@ -1,21 +1,21 @@
+<div class="form_content">
 <h1>Add Room</h1>
-
-
 <form method="POST" action="/rooms/add">
 
   
     <div>
       <label>Room Number</label>
-      <input type="number" name="roomNum" class="form-control" required/>
+      <input type="number" name="roomNum" class="form-control mb-3" required/>
     </div>
     <div>
       <label>Room Type</label>
-      <select name="RoomType" class="form-control" required>
+      <select name="RoomType" class="form-control mb-3" required>
           <%roomTypes.forEach(function(RoomType){%>
               <option value="<%= RoomType._id %>"><%= RoomType.type %></option>        
           <% }) %>
       </select>
   </div>
-    <button type="submit"  class="btn btn-secondary btn-lg">Add New Room</button>
+    <button type="submit"  class="btn btn-secondary btn-lg mb-3">Add New Room</button>
 
   </form>
+</div>

@@ -7,11 +7,23 @@
                     <a class="nav-link navbar-brand" href="/hotel/index">Home</a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link navbar-brand" href="/roomType/index">Rooms</a>
+                  <a class="nav-link navbar-brand" href="/rooms/index">Rooms</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link navbar-brand" href="/rooms/add">Add Room</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="/roomType/index">Room Types</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link navbar-brand" href="/roomType/add">Add Room Type</a>
+                          </li>
                   <li class="nav-item">
                     <a class="nav-link navbar-brand" href="/booking/index">Bookings</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="/booking/check">Add Booking</a>
+                        </li>
                   <li class="nav-item">
                   <a class="nav-link navbar-brand" href="/user/detail?id=<%=  user._id %>"><%= user.name %></a>
                   </li>
@@ -31,7 +43,7 @@
               <a class="nav-link navbar-brand" href="/roomType/index">Rooms</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navbar-brand" href="/booking/index">Bookings</a>
+                <a class="nav-link navbar-brand" href="/booking/check">Bookings</a>
                 </li>
               <li class="nav-item">
               <a class="nav-link navbar-brand" href="/user/detail?id=<%=  user._id %>"><%= user.name %></a>
@@ -45,7 +57,7 @@
         <% } else { %>
             <!-- Add links for non-logged-in users if needed -->
             <a href="/hotel/index" class="navbar-brand"><img src="\uploads\git-guardians-logo.png" alt="Logo" class="logo-img"></a> 
-             <a href="/auth/google" class="nav-item">Login</a> 
+             <a href="/auth/google" class="nav-link navbar-brand">Login</a> 
             
         <% } %>
 </nav>
