@@ -2,7 +2,6 @@
 <table class="table table-success table-striped">
 <tr>
 <th>Bookings</th>
-<th>Room Name</th>
 <th>Checking In At</th>
 <th>Checking Out At</th>
 <th>Delete</th>
@@ -12,7 +11,6 @@
 <% bookings.forEach(function(booking){%>
 <tr>
 <td><a href="/booking/detail?id=<%=booking._id %>">Review Details</a></td>
-<td><%=//booking.RoomType.type%></td>
 <td><%= dayjs(booking.checkIn).format('MM/DD/YYYY')  %></td>
 <td><%= dayjs(booking.checkOut).format('MM/DD/YYYY')  %></td>
 <td><a href="/booking/delete?id=<%=booking._id %>" class="btn btn-primary">Delete</a></td>

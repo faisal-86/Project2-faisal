@@ -1,10 +1,68 @@
-/* Hotel index page  */
-
-.hotelLogo{
-    height: 100px;
-    background-color:#ababab ;
+.footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
 }
-.hotel-info{
+.home_table{
+    width: 100%;
+}
+.home_td{
+    margin: 70px;
+}
+.nav{
+    background-color:#5fabb4 ;
+}
+.hotel{
+    height: 80vh;
+    background: linear-gradient(0deg, rgba(83, 164, 153, 0.514), rgba(79, 171, 159, 0.548)), url("/asset/images/modern-luxury-hotel-office-reception-lounge-with-meeting-room.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.hero{
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero a{
+    font-size: 1.5vw;
+}
+.hero h1{
+    font-size: 4vw;
+}
+.nav-link{
+    color: white;
+}
+.hotel_info{
+    height: auto;
+    padding: 20px;
+    background-color: #5fabb4;
+}
+.hotel_info h3{
+    font-size: 1.2vw;
+    color: black;
+}
+.nav .logo-img {
+    height: 50px;
+    width: auto;
+}
+
+ 
+    nav .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+.form_content{
+    width:60%;
+    margin: 50px auto;
+}
+/* .hotel-info{
         
     margin-top: 20px;
     text-align: center;
@@ -20,24 +78,14 @@
     }
 
     nav .logo-link {
-    margin-right: 1250px; /* Make sure to add units (px, em, etc.) */
+    margin-right: 1250px; /* Make sure to add units (px, em, etc.) 
     
-}
-
-nav .logo-img {
-    height: 50px;
-    width: auto;
-}
-
-
-    nav .avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    }
+} */
 
 
 
+
+/*
 
     ul {
         list-style-type: none;
@@ -45,8 +93,8 @@ nav .logo-img {
         gap: 10px;
         margin: 0;
         padding: 0;
-        margin-left: auto; /* Pushes the links to the right */
-    }
+        margin-left: auto; /* Pushes the links to the right 
+    } */
 /* End of the page */
 
 /* user add page */
@@ -129,13 +177,13 @@ display: grid;
   
 }
 
-table{
+/* table{
     width: max-content;
 
 }
 .btn{
 
-}
+} */
 
 /* End of the page  */
 
@@ -194,7 +242,7 @@ border-radius: 50%;
     font-family: Arial, sans-serif;
 } */
 
-.userEditPageCon {
+/* .userEditPageCon {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -258,7 +306,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #0056b3;
-}
+} */
 
 /* End of the page  */
 
@@ -266,7 +314,7 @@ button[type="submit"]:hover {
 
 /* rooms index page  */
 
-.roomsIndexLogo{
+/* .roomsIndexLogo{
     height: 151px;
     width: auto;
     background-color: #ababab;
@@ -297,7 +345,7 @@ width: 600px;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-}
+} */
 
 
 
@@ -306,7 +354,7 @@ width: 600px;
 
 /* RoomType Index page  */
 
-
+/* 
 .roomTypeIndex {
     height: 100vh;
     margin: 0;
@@ -364,13 +412,13 @@ width: 600px;
 
 .headerTitle {
     margin-bottom: 15px;
-}
+} */
 
 /* end of the page  */
 
 /* roomType detail page  */
 
-.roomTypePageCon{
+/* .roomTypePageCon{
     font-family: Arial, sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -386,49 +434,49 @@ width: 600px;
     padding: 85px;
     display: grid;
 
-}
+} */
 
 /* Title */
-h2 {
+/* h2 {
     font-size: 30px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
-}
+} */
 
 /* Text */
-p {
+/* p {
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
-}
+} */
 
 /* List */
-ul {
+/* ul {
     list-style-type: none;
     padding: 0;
-}
+} */
 
 /* List Item */
-li {
+/* li {
     margin-bottom: 10px;
-}
+} */
 
 /* Image */
-.mainImage {
+/* .mainImage {
     width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-}
+} */
 
 /* end of the page  */
 
 /* RoomType Edit page  */
+/* 
 
-
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -445,10 +493,10 @@ li {
     height: 100vh;
     background-color: #f2f2f2;
    }
-   
+   */
 
    form {
-    margin: 20px;
+    margin-top: 20px;
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -462,7 +510,7 @@ li {
     color: #333;
     margin-bottom: 10px;
    }
-
+   
    input[type="text"],
    input[type="file"] {
     width: 100%;
@@ -473,9 +521,11 @@ li {
     color: #333;
     margin-bottom: 20px;
    }
-   
+   input[type="text"]{
+    background-color: white;
+   }
   
-   input[type="submit"] {
+   /* input[type="submit"] {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
@@ -483,7 +533,7 @@ li {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-   }
+   } */
    
    input[type="submit"]:hover {
     background-color: #555;
