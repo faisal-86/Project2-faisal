@@ -1,24 +1,27 @@
-
+<div class="form_content">
 <div class="roomTypePageCon">
     <div class="roomTypedes">
 <div class="roomName">
-    Room Name: <%= roomType.type %>
+    <h1><%= roomType.type %> Room</h1>
 </div>
+<br>
 
 <div calss="roomPrice">
-    Room Price: <%= roomType.roomPrice %> $
+    <h2>Room Price: </h2><h4>$<%= roomType.roomPrice %></h4>
 </div>
+<br>
 
 <div class="roomDesc">
-    Description: <%= roomType.description %>
+    <h2>Description: </h2><h4><%= roomType.description %></h4>
 </div>
 </div>
-
+<br>
 
 <div>
-    <h2>Images</h2>
-    <ul>
-        <li><img class="mainImage" src="<%= roomType.images %>" alt="Room Image"></li>
-    </ul>
+    <h2>Room Image</h2>
+
+<img style="max-width: 50vw;" class="mainImage" src="<%= roomType.images %>" alt="Room Image">
+
+</div>
 </div>
 </div>
