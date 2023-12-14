@@ -152,7 +152,7 @@ body{
 
 
 /* User index page  */
-.userIndex{
+/* .userIndex{
     font-family: Arial, sans-serif;
     height: 151px;
     width: auto;
@@ -179,7 +179,7 @@ color: black;
 .userIndexPageCon{
 padding: 20px 20px;
 display: grid;
- background-image: url("../uploads/66440.jpg");
+background-image: url("../uploads/66440.jpg");
 
   
 }
@@ -198,7 +198,8 @@ display: grid;
 
 
 
-/* user details  page  */
+
+
 
 .userDetailPageCon{
 font-family: Arial, sans-serif;
@@ -240,14 +241,6 @@ border-radius: 50%;
 
 
 
-/* End of the page  */
-
-
-
-/* user Edit page  */
-/* body {
-    font-family: Arial, sans-serif;
-} */
 
 /* .userEditPageCon {
     font-family: Arial, sans-serif;
@@ -315,11 +308,9 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 } */
 
-/* End of the page  */
 
 
 
-/* rooms index page  */
 
 /* .roomsIndexLogo{
     height: 151px;
@@ -356,10 +347,8 @@ width: 600px;
 
 
 
-/* End of the page  */
 
 
-/* RoomType Index page  */
 
 /* 
 .roomTypeIndex {
@@ -367,7 +356,6 @@ width: 600px;
     margin: 0;
     background-image: url("../uploads/66440.jpg");
     font-family: Arial, sans-serif;
-    padding-top: 72px;
     margin: 20px;
     font-family: Arial, sans-serif;
 }
@@ -421,15 +409,12 @@ width: 600px;
     margin-bottom: 15px;
 } */
 
-/* end of the page  */
 
-/* roomType detail page  */
 
 /* .roomTypePageCon{
     font-family: Arial, sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-image: url("../uploads/66440.jpg");
     border: 15px solid #e0e0e0;
     border-radius: 5px;
     padding: 20px;
@@ -478,7 +463,6 @@ width: 600px;
 
 } */
 
-/* end of the page  */
 
 /* RoomType Edit page  */
 /* 
@@ -547,5 +531,43 @@ width: 600px;
    }
 
 
+.bookingCon{
+    background-image: url("../uploads/66440.jpg");
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+.bookingIndexCon{
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+}
 
-/* end of the page  */
+
+
+.bookingDetails {
+    font-family: 'Roboto', sans-serif;
+    padding: 200px;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 26px;
+    background-image: url("../uploads/66440.jpg");
+
+}
+.pageH3 {
+    text-align: center;
+    color: #000000;
+}
+.bookingDetailsCon {
+    display: grid;
+    border: 1px solid black;
+    opacity: 0.9;
+    padding: 50px;
+    border-radius: 30px;
+    padding: 63px 109px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
