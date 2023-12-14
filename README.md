@@ -36,14 +36,16 @@ This project is a Hotel Booking System built using Express.js, Node.js, MongoDB,
 
 - **User Access:**
   - Visit the homepage, browse available rooms, and make bookings.
-  - Leave reviews for rooms after your stay.
-  - Edit or delete your own reviews.
+  - Change and update their user details and avatar.
+  - Edit or delete their bookings.
 
 - **Admin Access:**
-  - Access the admin panel using the designated URL (e.g., /admin).
-  - Add new rooms to the hotel inventory.
-  - Upload and manage pictures for each room.
-
+  - Access the admin panel.
+  - View, edit, delete, and add new rooms to the hotel inventory.
+  - View, edit, delete, and add new room types to the hotel inventory.
+  - View, edit, delete, and add new booking to the hotel inventory.
+  - View, edit, and delete users and change their roles.
+  - Upload and manage pictures for each room type and user.
 
 ## Links
 
@@ -56,10 +58,20 @@ This project is a Hotel Booking System built using Express.js, Node.js, MongoDB,
 
 ## Entity Relationship Diagram
 
+![Alt text](image.png)
+
 
 
 ## Unsolved Problems
 
+- None
+
 
 
 ## Future Enhancements
+
+- Change the UI design.
+- Add Ajax API for the booking form, to make it a one step process.
+- Add more pages, like contact us, about us, etc.
+- Adjust the sitemap to get a better UX and meet best practices.
+- Add review and payment pages.
