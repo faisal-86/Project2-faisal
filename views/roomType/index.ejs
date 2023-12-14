@@ -7,8 +7,10 @@
   <th>Room Name</th>
   <th>Room Price</th>
   <th>Description</th>
+  <%if(user && user.role == "admin"){%>
   <th>Delete</th>
   <th>Edit</th>
+  <% } %>
   </tr>
   
   <hr>
@@ -21,9 +23,10 @@
            <td><%= roomType.roomPrice %> </td>
            
            <td><%= roomType.description%> </td>
+           <%if(user && user.role == "admin"){%>
          <td><a href="/roomType/delete?id=<%= roomType._id %>" class="btn btn-primary">Delete</a></td>
            <td><a href="/roomType/edit?id=<%= roomType._id %>" class="btn btn-primary">Edit</a></td>
-            
+            <%}%>
        
       </tr>
   
